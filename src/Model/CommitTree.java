@@ -3,6 +3,7 @@ package Model;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Nathnael on 8/17/2017.
@@ -95,6 +96,12 @@ public class CommitTree {
         System.out.println();
 
         System.out.println(currentCommit.getCommitMessage());
+    }
+    public String getCurrentBranch(){
+        return currentBranchName;
+    }
+    public Set<String> getBranches(){
+        return branchPointers.keySet();
     }
 
     private void displayLog(String branchName, Snapshot currentCommit, int i){
