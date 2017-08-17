@@ -2,6 +2,7 @@ package Model;
 
 import Model.FileModel.FileInfo;
 
+import java.io.File;
 import java.util.*;
 
 /**
@@ -65,6 +66,14 @@ public class Snapshot {
         }
         return false;
 
+    }
+    public String getFile(String fileName){
+        for(FileInfo f: files){
+            if(f.getFilename().equals(fileName)){
+                return f.getSerializedFileName();
+            }
+        }
+        return null;
     }
 
     public List<FileInfo> getFiles(){

@@ -13,6 +13,10 @@ public class CommitTree {
     //useful for efficiently executing finc command
     private HashMap<String, List<Snapshot>> mapMessageToCommit;
 
+    public void setCurrentBranchName(String currentBranchName) {
+        this.currentBranchName = currentBranchName;
+    }
+
     //private List<CommitNode> commitTree;
     private String currentBranchName;
     private int currentMaxID;

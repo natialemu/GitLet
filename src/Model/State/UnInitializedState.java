@@ -6,9 +6,11 @@ import java.io.File;
  * Created by Nathnael on 8/17/2017.
  */
 public class UnInitializedState implements GitLetStateMachine {
+    //String directoryPath;
     GitVCS gitlet;
     public UnInitializedState(){
         gitlet = new GitVCS();
+        //directoryPath = "";
     }
     @Override
     public Void init() {

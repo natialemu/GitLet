@@ -250,16 +250,82 @@ public class InitializedState implements GitLetStateMachine{
 
     @Override
     public Void checkout(String filename) {
+
+        File inputFile = new File(filename);
+        if(!inputFile.exists()){
+            System.out.println("Requested file does not exist. Please provide a correct file");
+            return null;
+        }
+        if(!tree.fileIsInLastCommit(filename)){
+            System.out.println("File does not exist in the most recent commit, or no such branch exists.");
+            return null;
+        }
+        Snapshot lastCommit = tree.getLastCommit();
+        String serializedName = lastCommit.getFile(filename);
+        File fileFromLastCommit = deserializeFile(serializedName);
+
+        copyFile(fileFromLastCommit,inputFile);
+
+        //first make sure file exists in current working directory
+        //second make sure file exists in last commit
+        // get file from last commit
+        //get deserialized file
+        //replace the current file with the deserialized file
+        //
         return null;
+    }
+
+    public void copyFile(File source, File desination){
+        try{
+            FileInputStream inputStream= new FileInputStream(source);
+            FileOutputStream outputStream = new FileOutputStream(desination);
+
+            byte[] buffer = new byte[1024];
+
+            int length;
+
+            while((length = inputStream.read(buffer)) > 0){
+                outputStream.write(buffer,0,length);
+            }
+            inputStream.close();
+            outputStream.close();
+
+        }catch (IOException ioe){
+            ioe.printStackTrace();
+        }
     }
 
     @Override
     public Void checkout(int commitId, String filename) {
+        File inputFile = new File(filename);
+        if(!inputFile.exists()){
+            System.out.println("Requested file does not exist. Please provide a correct file");
+            return null;
+        }
+
+        Snapshot commit = tree.getCommit(commitId);
+        if(commit == null){
+            System.out.println("No commit with that id exists.");
+            return null;
+        }
+        if(!commit.exists(filename)){
+            System.out.println("File does not exist in that  commit.");
+            return null;
+        }
+        String serializedName = commit.getFile(filename);
+        File fileFromLastCommit = deserializeFile(serializedName);
+
+        copyFile(fileFromLastCommit,inputFile);
         return null;
     }
 
     @Override
     public Void checkoutv2(String brachname) {
+        //get the commit id of the branch
+        tree.setCurrentBranchName(brachname);
+        for(String filename: workingDirectory){
+            checkout(filename);
+        }
         return null;
     }
 
