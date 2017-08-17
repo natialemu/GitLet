@@ -7,9 +7,7 @@ import Model.Snapshot;
 import Model.Tools.IDGenerator;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by Nathnael on 8/17/2017.
@@ -236,7 +234,9 @@ public class InitializedState implements GitLetStateMachine{
     @Override
     public Void find(String message) {
         List<Snapshot> commits = tree.getCommitWithMessage(message);
+        System.out.println("Commits with the given message: \n");
         for(Snapshot s: commits){
+            System.out.println("Commit id: " +  s.getId());
             //print out the id of the snapshot
         }
         return null;
@@ -245,6 +245,36 @@ public class InitializedState implements GitLetStateMachine{
 
     @Override
     public Void status() {
+        List<String> filesMarkedForRemoval = new ArrayList<>();
+        Snapshot lastCommit = tree.getLastCommit();
+        for(FileInfo f: lastCommit.getFiles()){
+            if(f.tagged()){
+                filesMarkedForRemoval.add(f.getFilename());
+            }
+        }
+        Set<String> branches = tree.getBranches();
+        String currentBranch = tree.getCurrentBranch();
+        Iterator<String> setIterator = branches.iterator();
+        System.out.println("=== Branches ===");
+        System.out.println("*"+currentBranch);
+        while (setIterator.hasNext()){
+            String branch = setIterator.next();
+            if(branch != currentBranch){
+                System.out.println(branch);
+            }
+        }
+        System.out.println();
+        System.out.println("=== Staged Files");
+        for(String s: workingDirectory){
+            System.out.println(s);
+        }
+        System.out.println();
+
+        System.out.println("=== Files Marked for Removal ===");
+        for(String s: filesMarkedForRemoval){
+            System.out.println(s);
+        }
+
         return null;
     }
 
