@@ -17,12 +17,23 @@ public class Snapshot {
         return commitMessage;
     }
 
-    private final String commitMessage;
+    public void setCommitMessage(String commitMessage) {
+        this.commitMessage = commitMessage;
+    }
+
+    private String commitMessage;
     private boolean visited;
     Calendar calendar;
 
     public Date getDateCreated() {
         return dateCreated;
+    }
+
+    public Snapshot(Snapshot copySnapShot, int id){
+        files = copySnapShot.getFiles();
+        dateCreated = copySnapShot.getDateCreated();
+        this.id = id;
+        this.commitMessage = copySnapShot.getCommitMessage();
     }
 
     public Snapshot(int id, String commitMessage){
@@ -55,6 +66,15 @@ public class Snapshot {
         return false;
 
 
+    }
+
+    public String getSerializeable(String fileName){
+        for(FileInfo fileInfo: files){
+            if(fileInfo.getFilename().equals(fileName)){
+                return fileInfo.getSerializedFileName();
+            }
+        }
+        return null;
     }
 
     public boolean isFileMarked(String filename){

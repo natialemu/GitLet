@@ -1,9 +1,8 @@
 package Model;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import Model.Tools.IDGenerator;
+
+import java.util.*;
 
 /**
  * Created by Nathnael on 8/17/2017.
@@ -166,6 +165,187 @@ public class CommitTree {
             return true;
         }else{
             return false;
+        }
+    }
+
+    public boolean fileHasBeenModified(String filename, String branchName){
+        Snapshot snapshot;
+        boolean isModified =false;
+        for(snapshot = branchPointers.get(branchName); !mappedCommits.containsKey(snapshot); snapshot = mappedCommits.get(snapshot)){
+
+            if(snapshot.exists(filename) && snapshot.isFileMarked(filename)){
+                return false;
+            }else if(snapshot.exists(filename)){
+                isModified = true;
+            }
+            //do same thing as the other method
+        }
+        return isModified;
+        //TODO
+    }
+
+    public boolean fileHasBeenModified(String filename, String branchName, Snapshot finalCommit){
+        //start from the commit of the branchname. then iteratively
+        // if file has been removed at some point, then return false
+        // otherwise, return true
+
+        Snapshot snapshot;
+        boolean isModified = false;
+        for(snapshot = branchPointers.get(branchName); snapshot.equals(finalCommit); snapshot = mappedCommits.get(snapshot)){
+            if(snapshot.exists(filename) && snapshot.isFileMarked(filename)){
+                return false;
+            }else if(snapshot.exists(filename)){
+                isModified = true;
+            }
+
+        }
+        return isModified;
+        //TODO
+    }
+
+    public Snapshot getLastCommit(String branch){
+        return branchPointers.get(branch);
+    }
+    public Snapshot getSplitPoint(String brachName) {
+
+        Set<Snapshot> visitedCommit = new HashSet<>();
+
+        Snapshot currentCommit = branchPointers.get(currentBranchName);
+        Snapshot givenCommit = branchPointers.get(brachName);
+        visitedCommit.add(currentCommit);
+        visitedCommit.add(givenCommit);
+        Snapshot splitPoint = null;
+        while(!mappedCommits.containsKey(currentCommit) || !mappedCommits.containsKey(givenCommit)){
+            if(!visitedCommit.contains(currentCommit)){
+                visitedCommit.add(currentCommit);
+            }else{
+                splitPoint = currentCommit;
+                break;
+            }
+            if(!visitedCommit.contains(givenCommit)){
+                visitedCommit.add(givenCommit);
+
+            }else{
+                splitPoint = givenCommit;
+                break;
+            }
+
+
+            currentCommit = mappedCommits.get(currentCommit);
+            givenCommit = mappedCommits.get(givenCommit);
+        }
+        return splitPoint;
+    }
+
+    public void rebase(String branchName, Snapshot splitPoint) {
+        //iterate from the currentBranch until the split point
+        //when you get to the point, change the value of that commit
+        //in the map to be the current commit of the branchName
+        Snapshot currentCommit = branchPointers.get(currentBranchName);
+        Snapshot s;
+        Snapshot commitBeforeCurrentBranchName = null;
+        for(s = currentCommit; s.equals(splitPoint); s = mappedCommits.get(s)){
+
+            Snapshot newSnapShot = new Snapshot(currentCommit,IDGenerator.getCommitId());
+            if(commitBeforeCurrentBranchName == null){
+                mappedCommits.put(newSnapShot,branchPointers.get(branchName));
+                branchPointers.put(currentBranchName,newSnapShot);
+                commitBeforeCurrentBranchName = newSnapShot;
+            }else{
+                mappedCommits.put(newSnapShot,mappedCommits.get(commitBeforeCurrentBranchName));
+                mappedCommits.put(commitBeforeCurrentBranchName,newSnapShot);
+                commitBeforeCurrentBranchName = newSnapShot;
+            }
+                //create a new snapshot with a new id
+                //insertIntoTree(branchName,newSnapshot); star from current branch and when you get to branchName
+
+                  // create a new commit with a new id
+                  // if commitBeforecurrentBranch is null:
+                  //
+                  //       newCommit points to snapshot with branchName
+                  //       currentBranchName now points to this branch
+                  //       newCommit is assigned to commitBeforeCurrentBranchName
+                  // else:
+                  //       newCommit has the same value as commitBeforecurrent ....
+                 //        commitBefore...  has value of newCommit
+                  //       commitBefoe... becomes new Commit
+
+                if(!mappedCommits.get(s).equals(splitPoint)){
+                    break;
+                }
+
+        }
+    }
+
+    public void interactiveRebase(String branchName, Snapshot splitPoint) {
+        Snapshot currentCommit = branchPointers.get(currentBranchName);
+        Snapshot s;
+        Snapshot commitBeforeCurrentBranchName = null;
+        System.out.println("Currently replaying: ");
+        int i =0;
+        for(s = currentCommit; s.equals(splitPoint); s = mappedCommits.get(s)) {
+
+            Snapshot newSnapShot = new Snapshot(currentCommit, IDGenerator.getCommitId());
+            printLog(newSnapShot,i);
+            System.out.println("Would you like to (c)ontinue, (s)kip this commit, or change this commit's (m)essage? ");
+            Scanner scan = new Scanner(System.in);
+            String input = scan.next().toLowerCase();
+            while(!input.equals("c") || !input.equals("s") || !input.equals("m")){
+                System.out.print("Provide a valid response");
+                System.out.println("Would you like to (c)ontinue, (s)kip this commit, or change this commit's (m)essage? ");
+
+                scan = new Scanner(System.in);
+                input = scan.next().toLowerCase();
+            }
+
+            if(input.equals("m")){
+                System.out.println("Please enter a new message for this commit.");
+                scan = new Scanner(System.in);
+                String commitMessage = scan.nextLine();
+                newSnapShot.setCommitMessage(commitMessage);
+            }
+            if(s.equals(splitPoint) && input.equals("s") || commitBeforeCurrentBranchName == null && input.equals("s")){
+                while(input.equals("s")){
+                    System.out.print("You can't skip an initial commit");
+                    System.out.println("Would you like to (c)ontinue, (s)kip this commit, or change this commit's (m)essage? ");
+
+                    scan = new Scanner(System.in);
+                    input = scan.next().toLowerCase();
+
+                }
+            }
+            if (commitBeforeCurrentBranchName == null) {
+
+                mappedCommits.put(newSnapShot, branchPointers.get(branchName));
+                branchPointers.put(currentBranchName, newSnapShot);
+                commitBeforeCurrentBranchName = newSnapShot;
+            } else {
+                if(input.equals("s") && !s.equals(splitPoint)){
+                    continue;
+                }
+
+                mappedCommits.put(newSnapShot, mappedCommits.get(commitBeforeCurrentBranchName));
+                mappedCommits.put(commitBeforeCurrentBranchName, newSnapShot);
+                commitBeforeCurrentBranchName = newSnapShot;
+            }
+            //create a new snapshot with a new id
+            //insertIntoTree(branchName,newSnapshot); star from current branch and when you get to branchName
+
+            // create a new commit with a new id
+            // if commitBeforecurrentBranch is null:
+            //
+            //       newCommit points to snapshot with branchName
+            //       currentBranchName now points to this branch
+            //       newCommit is assigned to commitBeforeCurrentBranchName
+            // else:
+            //       newCommit has the same value as commitBeforecurrent ....
+            //        commitBefore...  has value of newCommit
+            //       commitBefoe... becomes new Commit
+
+            if (!mappedCommits.get(s).equals(splitPoint)) {
+                break;
+            }
+            i++;
         }
     }
 

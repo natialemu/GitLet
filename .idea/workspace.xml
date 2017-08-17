@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="415940b4-5ac3-4c2f-bf6c-a616a21c8aa4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/CommitTree.java" afterPath="$PROJECT_DIR$/src/Model/CommitTree.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Snapshot.java" afterPath="$PROJECT_DIR$/src/Model/Snapshot.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/State/InitializedState.java" afterPath="$PROJECT_DIR$/src/Model/State/InitializedState.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -40,15 +40,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommitTree.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CommitTree.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Model/CommitTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="167" column="25" lean-forward="false" selection-start-line="167" selection-start-column="25" selection-end-line="167" selection-end-column="25" />
+            <state relative-caret-position="420">
+              <caret line="322" column="17" lean-forward="false" selection-start-line="322" selection-start-column="17" selection-end-line="322" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1972#1973#0" expanded="true" />
-                <element signature="e#2056#2057#0" expanded="true" />
+                <element signature="e#1931#1932#0" expanded="true" />
+                <element signature="e#2015#2016#0" expanded="true" />
+                <element signature="e#5831#5832#0" expanded="true" />
+                <element signature="e#5880#5881#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InitializedState.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InitializedState.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/State/InitializedState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="376" column="10" lean-forward="false" selection-start-line="376" selection-start-column="10" selection-end-line="376" selection-end-column="10" />
+            <state relative-caret-position="783">
+              <caret line="483" column="30" lean-forward="false" selection-start-line="483" selection-start-column="13" selection-end-line="483" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -161,19 +163,11 @@
       <file leaf-file-name="Snapshot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Snapshot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1485">
-              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="561">
+              <caret line="19" column="56" lean-forward="false" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
               <folding>
-                <element signature="e#295#296#0" expanded="false" />
-                <element signature="e#331#332#0" expanded="false" />
-                <element signature="e#460#461#0" expanded="false" />
-                <element signature="e#494#495#0" expanded="false" />
-                <element signature="e#854#855#0" expanded="false" />
-                <element signature="e#885#886#0" expanded="false" />
-                <element signature="e#910#911#0" expanded="false" />
-                <element signature="e#935#936#0" expanded="false" />
-                <element signature="e#1845#1846#0" expanded="false" />
-                <element signature="e#1873#1874#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#439#440#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -208,16 +202,17 @@
         <option value="$PROJECT_DIR$/src/Model/State/GitVCS.java" />
         <option value="$PROJECT_DIR$/src/Model/FileModel/FileInfo.java" />
         <option value="$PROJECT_DIR$/src/Model/FileModel/FileInfoConcrete.java" />
+        <option value="$PROJECT_DIR$/src/Model/State/InitializedState.java" />
         <option value="$PROJECT_DIR$/src/Model/Snapshot.java" />
         <option value="$PROJECT_DIR$/src/Model/CommitTree.java" />
-        <option value="$PROJECT_DIR$/src/Model/State/InitializedState.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1489" />
-    <option name="width" value="1522" />
-    <option name="height" value="1931" />
+    <option name="x" value="-13" />
+    <option name="y" value="-13" />
+    <option name="width" value="3026" />
+    <option name="height" value="1946" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -638,8 +633,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1489" y="0" width="1522" height="1931" extended-state="0" />
-    <editor active="false" />
+    <frame x="-13" y="-13" width="3026" height="1946" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -652,7 +647,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3268206" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26491478" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
@@ -700,8 +695,10 @@
           <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1972#1973#0" expanded="true" />
-            <element signature="e#2056#2057#0" expanded="true" />
+            <element signature="e#1931#1932#0" expanded="true" />
+            <element signature="e#2015#2016#0" expanded="true" />
+            <element signature="e#5831#5832#0" expanded="true" />
+            <element signature="e#5880#5881#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -803,16 +800,8 @@
         <state relative-caret-position="1485">
           <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
-            <element signature="e#295#296#0" expanded="false" />
-            <element signature="e#331#332#0" expanded="false" />
-            <element signature="e#460#461#0" expanded="false" />
-            <element signature="e#494#495#0" expanded="false" />
-            <element signature="e#854#855#0" expanded="false" />
-            <element signature="e#885#886#0" expanded="false" />
-            <element signature="e#910#911#0" expanded="false" />
-            <element signature="e#935#936#0" expanded="false" />
-            <element signature="e#1845#1846#0" expanded="false" />
-            <element signature="e#1873#1874#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -926,25 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Snapshot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="e#295#296#0" expanded="false" />
-            <element signature="e#331#332#0" expanded="false" />
-            <element signature="e#460#461#0" expanded="false" />
-            <element signature="e#494#495#0" expanded="false" />
-            <element signature="e#854#855#0" expanded="false" />
-            <element signature="e#885#886#0" expanded="false" />
-            <element signature="e#910#911#0" expanded="false" />
-            <element signature="e#935#936#0" expanded="false" />
-            <element signature="e#1845#1846#0" expanded="false" />
-            <element signature="e#1873#1874#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Tools/IDGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -953,23 +923,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CommitTree.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/State/InitializedState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="167" column="25" lean-forward="false" selection-start-line="167" selection-start-column="25" selection-end-line="167" selection-end-column="25" />
+        <state relative-caret-position="783">
+          <caret line="483" column="30" lean-forward="false" selection-start-line="483" selection-start-column="13" selection-end-line="483" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Snapshot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="19" column="56" lean-forward="false" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1972#1973#0" expanded="true" />
-            <element signature="e#2056#2057#0" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/State/InitializedState.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/CommitTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="376" column="10" lean-forward="false" selection-start-line="376" selection-start-column="10" selection-end-line="376" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="420">
+          <caret line="322" column="17" lean-forward="false" selection-start-line="322" selection-start-column="17" selection-end-line="322" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1931#1932#0" expanded="true" />
+            <element signature="e#2015#2016#0" expanded="true" />
+            <element signature="e#5831#5832#0" expanded="true" />
+            <element signature="e#5880#5881#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

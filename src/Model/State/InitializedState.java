@@ -383,21 +383,106 @@ public class InitializedState implements GitLetStateMachine{
 
     @Override
     public Void reset(int commitId) {
+        //get the commit
+        //for all files in the commit:
+        //    if file exists in the current directory:
+        //           get serializeable of the file in commit
+        //             copy files
+
+        Snapshot commit = tree.getCommit(commitId);
+
+        for(FileInfo fi: commit.getFiles()){
+            String fileInCommit = fi.getFilename();
+            File output = new File(fileInCommit);
+            if(output.exists()){
+                String serializedFile = fi.getSerializedFileName();
+                File serializedFileOutput = deserializeFile(serializedFile);
+                copyFile(serializedFileOutput,output);
+            }
+
+        }
+
         return null;
     }
 
     @Override
     public Void merge(String brachName) {
+
+        //find the earliest common ancestor of the given branch and current branch
+        //identify a modified file within an interval in a branch
+        //if there are any files in both branches, the one in given replaces the one in current
+        Snapshot splitPoint = tree.getSplitPoint(brachName);
+
+        Snapshot lastCommitOfGivenBranch = tree.getLastCommit(brachName);
+        for(FileInfo fileInfo: lastCommitOfGivenBranch.getFiles()){
+            if(tree.fileHasBeenModified(fileInfo.getFilename(),brachName,splitPoint) && tree.fileHasBeenModified(fileInfo.getFilename(),tree.getCurrentBranch(),splitPoint)){
+                createNewFile(fileInfo.getFilename(),fileInfo.getSerializedFileName());
+                /*String newFileName = fileInfo.getFilename() + ".conflicted";
+                add(newFileName);
+                commit("added conflicting file to current commit ");
+                */
+            }else if(tree.fileHasBeenModified(fileInfo.getFilename(),brachName,splitPoint) && !tree.fileHasBeenModified(fileInfo.getFilename(),tree.getCurrentBranch(),splitPoint)){
+
+                //Do Nothing
+
+
+            }else if(!tree.fileHasBeenModified(fileInfo.getFilename(),brachName,splitPoint) && tree.fileHasBeenModified(fileInfo.getFilename(),tree.getCurrentBranch(),splitPoint)){
+
+                File source = deserializeFile(fileInfo.getSerializedFileName());
+                ;
+                File desitnation = deserializeFile(tree.getLastSnapshot().getSerializeable(fileInfo.getSerializedFileName()));
+                copyFile(source,desitnation);
+            }
+        }
+        return null;
+        //for each file in the given branch:
+        //            if that file is modified in the given branch AND the current branch:
+        //                            do something
+                                      //create a new file with the name filename.conflicted
+        //                            add the conflict in the current branch without replacing
+        //            if that file is modified ONLY in the given branch:
+        //                             do something
+        //                            leave them
+        //            if that file has been modified ONLY in the current branch:
+        //                              do something
+        //                                   copy file in current branch with given branch
+        //
+
+
+        //return null;
+
+    }
+
+    private void createNewFile(String filename, String serializedFileName) {
+        try {
+            PrintWriter writer = new PrintWriter(filename+".conflicted","UTF-8");
+
+            writer.close();
+            File newFile = new File(filename+".conflicted");
+            File source  = deserializeFile(serializedFileName);
+            copyFile(source,newFile);
+        }catch (IOException ioe){
+            ioe.printStackTrace();
+        }
+
+    }
+
+    @Override
+    public Void rebase(String branchName) {
+
+        //get the split point
+        Snapshot splitPoint = tree.getSplitPoint(branchName);
+        tree.rebase(branchName,splitPoint);
+
         return null;
     }
 
     @Override
-    public Void rebase(String brachName) {
-        return null;
-    }
+    public Void interactiveRebase(String branchName) {
 
-    @Override
-    public Void interactiveRebase(String brachName) {
+        Snapshot splitPoint = tree.getSplitPoint(branchName);
+        tree.interactiveRebase(branchName,splitPoint);
+
         return null;
     }
 }
