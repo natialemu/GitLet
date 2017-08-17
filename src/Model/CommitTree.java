@@ -70,6 +70,10 @@ public class CommitTree {
 
     }
 
+    public void addBranch(String branchName){
+        branchPointers.put(branchName,branchPointers.get(currentBranchName));
+    }
+
 
     //not quite right!!
     public Snapshot getCommit(int commitID){
@@ -149,6 +153,20 @@ public class CommitTree {
         //TODO
         return null;
 
+    }
+
+    public boolean branchExists(String branchName) {
+
+        return branchPointers.containsKey(branchName);
+    }
+
+    public boolean removeBranch(String branchName) {
+        if(branchExists(branchName)){
+            branchPointers.remove(branchName);
+            return true;
+        }else{
+            return false;
+        }
     }
 
     /*public List<CommitNode> getCommitTree(){

@@ -361,11 +361,23 @@ public class InitializedState implements GitLetStateMachine{
 
     @Override
     public Void branch(String branchName) {
+        //creates a new branch
+        //points to the same commit as the current branch
+        //does not change the active branch
+        tree.addBranch(branchName);
+
         return null;
     }
 
     @Override
     public Void rmBranch(String branchName) {
+        //check if branch exists
+        if(tree.getCurrentBranch().equals(branchName)){
+            System.out.println("Cannot remove the current branch.");
+        } else if(!tree.removeBranch(branchName)){
+            System.out.println("A branch with that name does not exist");
+        }
+
         return null;
     }
 
