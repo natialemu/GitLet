@@ -12,9 +12,18 @@ public class Snapshot {
     private List<FileInfo> files;
     private final Date dateCreated;
     private final int id;
+
+    public String getCommitMessage() {
+        return commitMessage;
+    }
+
     private final String commitMessage;
     private boolean visited;
     Calendar calendar;
+
+    public Date getDateCreated() {
+        return dateCreated;
+    }
 
     public Snapshot(int id, String commitMessage){
         //initialize the Date object above

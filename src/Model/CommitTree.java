@@ -1,7 +1,9 @@
 package Model;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Nathnael on 8/17/2017.
@@ -89,8 +91,42 @@ public class CommitTree {
 
         return false;
     }
+    private void printLog(Snapshot currentCommit, int i){
+        System.out.println("=====");
+        System.out.println();
+        System.out.println("Commit " + i);
+        Date date = currentCommit.getDateCreated();
+        System.out.println(date);
+        System.out.println();
+
+        System.out.println(currentCommit.getCommitMessage());
+    }
+    public String getCurrentBranch(){
+        return currentBranchName;
+    }
+    public Set<String> getBranches(){
+        return branchPointers.keySet();
+    }
+
+    private void displayLog(String branchName, Snapshot currentCommit, int i){
+        if(!mappedCommits.containsKey(currentCommit)){//initial commit
+            printLog(currentCommit,i);
+            return;
+
+        }else {
+            printLog(currentCommit, i);
+
+            displayLog(branchName, mappedCommits.get(currentCommit), ++i);
+        }
+
+
+
+
+    }
 
     public void displayLog(){
+        System.out.println("Branch: " + currentBranchName + "\n");
+        displayLog(currentBranchName,branchPointers.get(currentBranchName),0);
         //TODO: Iterate through the mapped commits starting from the current branch
         //Print the branch name
         //then for each snapshot:
@@ -104,8 +140,9 @@ public class CommitTree {
     }
 
     public void displayGlobalLog(){
-        //TODO: for each branch:
-        //     call the helper diplay log method
+        for(String branchName: branchPointers.keySet()){
+            displayLog(branchName,branchPointers.get(branchName),0);
+        }
     }
 
     public Snapshot getLastSnapshot(){
