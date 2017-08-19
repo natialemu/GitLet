@@ -10,10 +10,12 @@ public class GitVCS {
     List<String> workingDirectory;
     GitLetStateMachine currentState;//default should be uninitialized
 
+    public static final String RESOURCES_DIRECTORY = "./workingDirectory";
 
-    GitLetStateMachine INITIALIZED = new InitializedState();
 
-    GitLetStateMachine UNINITIALIZED = new UnInitializedState();
+    GitLetStateMachine INITIALIZED = new InitializedState(this);
+
+    GitLetStateMachine UNINITIALIZED = new UnInitializedState(this);
 
     public GitVCS(){
 
@@ -28,6 +30,9 @@ public class GitVCS {
         return null;
     }
 
+    public void toInitializedState(){
+        setGitState(INITIALIZED);
+    }
     public Void initalize()
     {
 

@@ -16,9 +16,11 @@ public class InitializedState implements GitLetStateMachine{
     private CommitTree tree;
     private List<String> workingDirectory;
     private GitVCS gitLet;
+
+
     //static int commit_id = IDGenerator.getCommitId();
-    public InitializedState(){
-        gitLet = new GitVCS();
+    public InitializedState(GitVCS gitLet){
+        this.gitLet = gitLet;
         tree = new CommitTree();
     }
     @Override
@@ -29,7 +31,7 @@ public class InitializedState implements GitLetStateMachine{
     @Override
     public Void add(String filename) {
 
-        File toBeAdded = new File(filename);
+        File toBeAdded = new File(GitVCS.RESOURCES_DIRECTORY+filename);
         if(!toBeAdded.exists()){
             System.out.println("File does not exist.");
         }else{
@@ -59,9 +61,9 @@ public class InitializedState implements GitLetStateMachine{
 
     public void writeToFile(File originalFile, String filename){
         try {
-            File outputFile = new File(filename);
+            File outputFile = new File(GitVCS.RESOURCES_DIRECTORY+filename);
             Scanner scanner = new Scanner(originalFile);
-            PrintWriter printer = new PrintWriter(outputFile);
+            PrintWriter printer = new PrintWriter(GitVCS.RESOURCES_DIRECTORY+outputFile);
             while(scanner.hasNext()){
                 String text = scanner.nextLine();
                 printer.write(text);
@@ -79,7 +81,7 @@ public class InitializedState implements GitLetStateMachine{
         String newFilename = filename.substring(0,filename.indexOf('.'));
         try{
 
-            FileInputStream fileIn = new FileInputStream(".gitlet/"+ newFilename + ".ser");
+            FileInputStream fileIn = new FileInputStream(GitVCS.RESOURCES_DIRECTORY+".gitlet/"+ newFilename + ".ser");
             ObjectInputStream input = new ObjectInputStream(fileIn);
             originalFile = (File) input.readObject();
             input.close();
@@ -100,14 +102,14 @@ public class InitializedState implements GitLetStateMachine{
 
     }
     public String serializeFile(String filename, int commitID){
-        File toBeSerialized = new File(filename);
+        File toBeSerialized = new File(GitVCS.RESOURCES_DIRECTORY+filename);
         String newFilename = filename.substring(0,filename.indexOf('.'));
         String serializedName = newFilename + ".ser";
         if(!toBeSerialized.exists()){
             return null;
         }
         try {
-            FileOutputStream fileout = new FileOutputStream(".gitlet/"+newFilename + commitID+".ser");
+            FileOutputStream fileout = new FileOutputStream(GitVCS.RESOURCES_DIRECTORY+".gitlet/"+newFilename + commitID+".ser");
             ObjectOutputStream output = new ObjectOutputStream(fileout);
             output.writeObject(toBeSerialized);
             output.close();
@@ -281,7 +283,7 @@ public class InitializedState implements GitLetStateMachine{
     @Override
     public Void checkout(String filename) {
 
-        File inputFile = new File(filename);
+        File inputFile = new File(GitVCS.RESOURCES_DIRECTORY+filename);
         if(!inputFile.exists()){
             System.out.println("Requested file does not exist. Please provide a correct file");
             return null;
@@ -327,7 +329,7 @@ public class InitializedState implements GitLetStateMachine{
 
     @Override
     public Void checkout(int commitId, String filename) {
-        File inputFile = new File(filename);
+        File inputFile = new File(GitVCS.RESOURCES_DIRECTORY+filename);
         if(!inputFile.exists()){
             System.out.println("Requested file does not exist. Please provide a correct file");
             return null;
@@ -393,7 +395,7 @@ public class InitializedState implements GitLetStateMachine{
 
         for(FileInfo fi: commit.getFiles()){
             String fileInCommit = fi.getFilename();
-            File output = new File(fileInCommit);
+            File output = new File(GitVCS.RESOURCES_DIRECTORY+fileInCommit);
             if(output.exists()){
                 String serializedFile = fi.getSerializedFileName();
                 File serializedFileOutput = deserializeFile(serializedFile);
@@ -455,10 +457,10 @@ public class InitializedState implements GitLetStateMachine{
 
     private void createNewFile(String filename, String serializedFileName) {
         try {
-            PrintWriter writer = new PrintWriter(filename+".conflicted","UTF-8");
+            PrintWriter writer = new PrintWriter(GitVCS.RESOURCES_DIRECTORY+filename+".conflicted","UTF-8");
 
             writer.close();
-            File newFile = new File(filename+".conflicted");
+            File newFile = new File(GitVCS.RESOURCES_DIRECTORY+filename+".conflicted");
             File source  = deserializeFile(serializedFileName);
             copyFile(source,newFile);
         }catch (IOException ioe){

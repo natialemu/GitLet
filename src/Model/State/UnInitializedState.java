@@ -8,17 +8,17 @@ import java.io.File;
 public class UnInitializedState implements GitLetStateMachine {
     //String directoryPath;
     GitVCS gitlet;
-    public UnInitializedState(){
-        gitlet = new GitVCS();
+    public UnInitializedState(GitVCS gitlet){
+        this.gitlet = gitlet;
         //directoryPath = "";
     }
     @Override
     public Void init() {
 
-        File gitFile = new File(".gitlet");
+        File gitFile = new File(GitVCS.RESOURCES_DIRECTORY+".gitlet");
         try{
             gitFile.mkdir();
-            gitlet.setGitState(new InitializedState());
+            gitlet.toInitializedState();
             gitlet.commit("Initial Commit");
             //call the first commit of gitlet here
         } catch (SecurityException se){
