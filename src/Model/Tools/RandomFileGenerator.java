@@ -56,6 +56,7 @@ public class RandomFileGenerator {
         }catch (IOException ioe){
             ioe.printStackTrace();
         }
+        return true;
 
     }
 
@@ -68,6 +69,7 @@ public class RandomFileGenerator {
             char newCharacter = (char) (A + rand);
             text.append(newCharacter);
         }
+        return text.toString();
     }
 
 
