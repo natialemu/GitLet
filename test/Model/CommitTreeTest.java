@@ -99,22 +99,47 @@ class CommitTreeTest {
     }
 
     @Test
-    void fileIsInLastCommit() {
-
-        //TODO
-    }
-
-    @Test
-    void fileNotModifiedSinceLastCommit() {
-
-        //TODO
-    }
-
-    @Test
     public void getSplitPoint(String branchName){
-        //
+        //commit 5 snapshots
+        //add a branch
+        //commit again on both branches
+        //the split point should just be the next snapshot
         //TODO
         //
+        String commitMessage = "first commit message";
+        Snapshot snapshot = new Snapshot(00,commitMessage);
+        commitTree.addSnapshotToTree(snapshot);
+
+        String commitMessage2 = "second message";
+        Snapshot secondSnapshot = new Snapshot(02,commitMessage2);
+        commitTree.addSnapshotToTree(secondSnapshot);
+
+        String commitMessage3 = "third commit message";
+        Snapshot snapshot3 = new Snapshot(10,commitMessage3);
+        commitTree.addSnapshotToTree(snapshot3);
+
+        String commitMessage4 = "fourth message";
+        Snapshot secondSnapshot4 = new Snapshot(12,commitMessage4);
+        commitTree.addSnapshotToTree(secondSnapshot4);
+
+        String commitMessage5 = "fifth message";
+        Snapshot snapshot5 = new Snapshot(13,commitMessage5);
+        commitTree.addSnapshotToTree(snapshot5);
+
+        Snapshot actualSplitPoint = commitTree.getLastCommit();
+
+        //add a branch
+        commitTree.addBranch("develop");
+        commitTree.addSnapshotToTree(new Snapshot(15,"sixth on master commit"));
+
+        //change branch
+        commitTree.setCurrentBranchName("develop");
+        commitTree.addSnapshotToTree(new Snapshot(16,"sixth on develop commit"));
+
+        Snapshot expectedSplitPoint = commitTree.getSplitPoint("develop");
+
+        assertEquals(expectedSplitPoint,actualSplitPoint);
+
     }
 
 

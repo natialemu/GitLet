@@ -199,6 +199,7 @@ public class CommitTree implements Serializable {
     }
 
 
+
     public boolean branchExists(String branchName) {
 
         return branchPointers.containsKey(branchName);
@@ -394,6 +395,16 @@ public class CommitTree implements Serializable {
         }
     }
 
+    public int getCommitId(String commitMessage){
+
+        Snapshot s;
+        for(s = branchPointers.get(currentBranchName); mappedCommits.containsKey(s);s = mappedCommits.get(s)){
+            if(s.getCommitMessage().equals(commitMessage)){
+                return s.getId();
+            }
+        }
+        return -1;
+    }
     /*public List<CommitNode> getCommitTree(){
         return mappedCommits;
     }
