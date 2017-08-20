@@ -84,6 +84,8 @@ public class RandomFileGenerator {
             filename.append(newCharacter);
         }
 
+        filename.append(".txt");
+
         return filename.toString();
 
 

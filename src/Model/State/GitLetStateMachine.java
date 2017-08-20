@@ -1,5 +1,7 @@
 package Model.State;
 
+import Model.CommitTree;
+
 /**
  * Created by Nathnael on 8/17/2017.
  */
@@ -21,4 +23,6 @@ public interface GitLetStateMachine {
     Void merge(String brachName);
     Void rebase(String brachName);
     Void interactiveRebase(String brachName);
+
+    void setCommitTree(CommitTree commitTree);
 }

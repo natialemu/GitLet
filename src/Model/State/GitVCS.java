@@ -1,5 +1,11 @@
 package Model.State;
 
+import Model.CommitTree;
+import Repository.Deserializer;
+import Repository.DeserializerImpl;
+import Repository.Serializer;
+import Repository.SerializerImpl;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,11 +13,36 @@ import java.util.List;
  * Created by Nathnael on 8/17/2017.
  */
 public class GitVCS {
-    List<String> workingDirectory;
-    GitLetStateMachine currentState;//default should be uninitialized
+
+    private List<String> workingDirectory;
+    private GitLetStateMachine currentState;//default should be uninitialized
+
+    public Deserializer getDeserializer() {
+        return deserializer;
+    }
+
+    public Serializer getSerializer() {
+        return serializer;
+    }
+
+    private Deserializer deserializer;
+
+    private Serializer serializer;
 
     public static final String RESOURCES_DIRECTORY = "./workingDirectory";
 
+    public void setCommitTree(CommitTree commitTree){
+        currentState.setCommitTree(commitTree);
+    }
+
+
+    public GitLetStateMachine getINITIALIZED() {
+        return INITIALIZED;
+    }
+
+    public GitLetStateMachine getUNINITIALIZED() {
+        return UNINITIALIZED;
+    }
 
     GitLetStateMachine INITIALIZED = new InitializedState(this);
 
@@ -22,6 +53,10 @@ public class GitVCS {
 
         workingDirectory = new ArrayList<>();
         setGitState(UNINITIALIZED);
+
+        serializer = new SerializerImpl();
+        deserializer = new DeserializerImpl();
+        initalize();
     }
 
     public Void setGitState(GitLetStateMachine state)

@@ -13,7 +13,16 @@ import java.util.*;
  * Created by Nathnael on 8/17/2017.
  */
 public class InitializedState implements GitLetStateMachine{
+    public CommitTree getTree() {
+        return tree;
+    }
+
     private CommitTree tree;
+
+    public List<String> getWorkingDirectory() {
+        return workingDirectory;
+    }
+
     private List<String> workingDirectory;
     private GitVCS gitLet;
 
@@ -22,6 +31,7 @@ public class InitializedState implements GitLetStateMachine{
     public InitializedState(GitVCS gitLet){
         this.gitLet = gitLet;
         tree = new CommitTree();
+        workingDirectory = new ArrayList<>();
     }
     @Override
     public Void init() {
@@ -41,8 +51,8 @@ public class InitializedState implements GitLetStateMachine{
 
                 if(tree.fileIsInLastCommit(filename) && tree.fileNotModifiedSinceLastCommit(filename)){
                     System.out.println("File has not been modified since last commit");
-                }else if(tree.getLastSnapshot().isFileMarked(filename)){
-                    tree.getLastSnapshot().unMarkFile(filename);
+                }else if(tree.getLastCommit().isFileMarked(filename)){
+                    tree.getLastCommit().unMarkFile(filename);
                 }else{
                     workingDirectory.add(filename);
                 }
@@ -75,54 +85,7 @@ public class InitializedState implements GitLetStateMachine{
 
     }
 
-    //assuming file extention is only three characters
-    public File deserializeFile(String filename){
-        File originalFile = null;
-        String newFilename = filename.substring(0,filename.indexOf('.'));
-        try{
 
-            FileInputStream fileIn = new FileInputStream(GitVCS.RESOURCES_DIRECTORY+".gitlet/"+ newFilename + ".ser");
-            ObjectInputStream input = new ObjectInputStream(fileIn);
-            originalFile = (File) input.readObject();
-            input.close();
-            fileIn.close();
-
-
-
-        } catch (IOException i){
-            i.printStackTrace();
-
-        } catch(ClassNotFoundException cn){
-            cn.printStackTrace();
-
-        }
-        return originalFile;
-
-
-
-    }
-    public String serializeFile(String filename, int commitID){
-        File toBeSerialized = new File(GitVCS.RESOURCES_DIRECTORY+filename);
-        String newFilename = filename.substring(0,filename.indexOf('.'));
-        String serializedName = newFilename + ".ser";
-        if(!toBeSerialized.exists()){
-            return null;
-        }
-        try {
-            FileOutputStream fileout = new FileOutputStream(GitVCS.RESOURCES_DIRECTORY+".gitlet/"+newFilename + commitID+".ser");
-            ObjectOutputStream output = new ObjectOutputStream(fileout);
-            output.writeObject(toBeSerialized);
-            output.close();
-            fileout.close();;
-
-
-        }catch (IOException io){
-            io.printStackTrace();
-
-        }
-        return serializedName;
-
-    }
 
     @Override
     public Void commit(String message) {
@@ -159,7 +122,7 @@ public class InitializedState implements GitLetStateMachine{
         Snapshot currentCommit = new Snapshot(commit_id,message);
         for(int i = 0; i < commitFiles.size(); i++){
 
-            String serializedFileName = serializeFile(commitFiles.get(i),commit_id);
+            String serializedFileName = gitLet.getSerializer().serializeTextFile(commitFiles.get(i),commit_id);
             FileInfo info = new FileInfoConcrete(commitFiles.get(i),serializedFileName);
             currentCommit.addFiles(info);
         }
@@ -176,6 +139,9 @@ public class InitializedState implements GitLetStateMachine{
         //make sure to serialize the files in the commit and put them in the .gitlet directory
         //change the serializeable name to the filenmae + the id of the commit it is in.
 
+        workingDirectory.removeAll(workingDirectory);
+
+        gitLet.getSerializer().serializeCommitTree(tree);
 
         return null;
     }
@@ -208,6 +174,7 @@ public class InitializedState implements GitLetStateMachine{
         }
 
 
+        gitLet.getSerializer().serializeCommitTree(tree);
 
 
         //if file is not in working directory or in previous commit print "No reason to remove the file".
@@ -222,9 +189,7 @@ public class InitializedState implements GitLetStateMachine{
         //determine the index of the id in the list
         // go in reverse order starting from that index
         tree.displayLog();
-        for(int i = 0; i < workingDirectory.size(); i++){
 
-        }
         return null;
     }
 
@@ -293,8 +258,8 @@ public class InitializedState implements GitLetStateMachine{
             return null;
         }
         Snapshot lastCommit = tree.getLastCommit();
-        String serializedName = lastCommit.getFile(filename);
-        File fileFromLastCommit = deserializeFile(serializedName);
+        String serializedName = lastCommit.getSerializedFile(filename);
+        File fileFromLastCommit = gitLet.getDeserializer().deserializeTextFile(serializedName);
 
         copyFile(fileFromLastCommit,inputFile);
 
@@ -304,6 +269,7 @@ public class InitializedState implements GitLetStateMachine{
         //get deserialized file
         //replace the current file with the deserialized file
         //
+        gitLet.getSerializer().serializeCommitTree(tree);
         return null;
     }
 
@@ -344,10 +310,11 @@ public class InitializedState implements GitLetStateMachine{
             System.out.println("File does not exist in that  commit.");
             return null;
         }
-        String serializedName = commit.getFile(filename);
-        File fileFromLastCommit = deserializeFile(serializedName);
+        String serializedName = commit.getSerializedFile(filename);
+        File fileFromLastCommit = gitLet.getDeserializer().deserializeTextFile(serializedName);
 
         copyFile(fileFromLastCommit,inputFile);
+        gitLet.getSerializer().serializeCommitTree(tree);
         return null;
     }
 
@@ -358,6 +325,7 @@ public class InitializedState implements GitLetStateMachine{
         for(String filename: workingDirectory){
             checkout(filename);
         }
+        gitLet.getSerializer().serializeCommitTree(tree);
         return null;
     }
 
@@ -368,6 +336,7 @@ public class InitializedState implements GitLetStateMachine{
         //does not change the active branch
         tree.addBranch(branchName);
 
+        gitLet.getSerializer().serializeCommitTree(tree);
         return null;
     }
 
@@ -379,6 +348,7 @@ public class InitializedState implements GitLetStateMachine{
         } else if(!tree.removeBranch(branchName)){
             System.out.println("A branch with that name does not exist");
         }
+        gitLet.getSerializer().serializeCommitTree(tree);
 
         return null;
     }
@@ -398,7 +368,7 @@ public class InitializedState implements GitLetStateMachine{
             File output = new File(GitVCS.RESOURCES_DIRECTORY+fileInCommit);
             if(output.exists()){
                 String serializedFile = fi.getSerializedFileName();
-                File serializedFileOutput = deserializeFile(serializedFile);
+                File serializedFileOutput = gitLet.getDeserializer().deserializeTextFile(serializedFile);
                 copyFile(serializedFileOutput,output);
             }
 
@@ -430,12 +400,13 @@ public class InitializedState implements GitLetStateMachine{
 
             }else if(!tree.fileHasBeenModified(fileInfo.getFilename(),brachName,splitPoint) && tree.fileHasBeenModified(fileInfo.getFilename(),tree.getCurrentBranch(),splitPoint)){
 
-                File source = deserializeFile(fileInfo.getSerializedFileName());
+                File source = gitLet.getDeserializer().deserializeTextFile(fileInfo.getSerializedFileName());
                 ;
-                File desitnation = deserializeFile(tree.getLastSnapshot().getSerializeable(fileInfo.getSerializedFileName()));
+                File desitnation = gitLet.getDeserializer().deserializeTextFile(tree.getLastCommit().getSerializeable(fileInfo.getSerializedFileName()));
                 copyFile(source,desitnation);
             }
         }
+        gitLet.getSerializer().serializeCommitTree(tree);
         return null;
         //for each file in the given branch:
         //            if that file is modified in the given branch AND the current branch:
@@ -461,12 +432,16 @@ public class InitializedState implements GitLetStateMachine{
 
             writer.close();
             File newFile = new File(GitVCS.RESOURCES_DIRECTORY+filename+".conflicted");
-            File source  = deserializeFile(serializedFileName);
+            File source  = gitLet.getDeserializer().deserializeTextFile(serializedFileName);
             copyFile(source,newFile);
         }catch (IOException ioe){
             ioe.printStackTrace();
         }
 
+    }
+
+    public boolean isInWorkingDirector(String filename){
+        return workingDirectory.contains(filename);
     }
 
     @Override
@@ -476,6 +451,7 @@ public class InitializedState implements GitLetStateMachine{
         Snapshot splitPoint = tree.getSplitPoint(branchName);
         tree.rebase(branchName,splitPoint);
 
+        gitLet.getSerializer().serializeCommitTree(tree);
         return null;
     }
 
@@ -485,6 +461,13 @@ public class InitializedState implements GitLetStateMachine{
         Snapshot splitPoint = tree.getSplitPoint(branchName);
         tree.interactiveRebase(branchName,splitPoint);
 
+        gitLet.getSerializer().serializeCommitTree(tree);
         return null;
+    }
+
+    @Override
+    public void setCommitTree(CommitTree commitTree) {
+
+        tree = commitTree;
     }
 }

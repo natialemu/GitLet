@@ -1,15 +1,22 @@
 package Model;
 
+import Model.FileModel.FileInfo;
+import Model.State.GitVCS;
 import Model.Tools.IDGenerator;
+import Repository.Deserializer;
+import Repository.DeserializerImpl;
 
+import java.io.File;
+import java.io.Serializable;
 import java.util.*;
 
 /**
  * Created by Nathnael on 8/17/2017.
  */
-public class CommitTree {
+public class CommitTree implements Serializable {
     private HashMap<String,Snapshot> branchPointers;
     private HashMap<Snapshot,Snapshot> mappedCommits;
+    Deserializer deserializer;
 
     //useful for efficiently executing finc command
     private HashMap<String, List<Snapshot>> mapMessageToCommit;
@@ -26,6 +33,7 @@ public class CommitTree {
         branchPointers = new HashMap<>();
         mappedCommits  = new HashMap<>();
         mapMessageToCommit = new HashMap();
+        deserializer = new DeserializerImpl();
 
         // commitTree = new ArrayList<>();
         currentBranchName = "Master";//by default should be master
@@ -36,18 +44,34 @@ public class CommitTree {
         //CommitNode newSnap = new CommitNode(snap.getId(),currentBranchName);
         //commitTree.add(newSnap);
         Snapshot mostRecentCommit = branchPointers.get(currentBranchName);
-        if(mappedCommits.containsKey(snap)){
-            mappedCommits.put(snap,mostRecentCommit);
-        }else{
 
-            mappedCommits.put(snap,mostRecentCommit);
-        }
+
+        mappedCommits.put(snap,mostRecentCommit);
 
         branchPointers.put(currentBranchName,snap);
+
+        String commitMessage = snap.getCommitMessage();
+
+        if(mapMessageToCommit.containsKey(commitMessage)){
+            List<Snapshot> commits = mapMessageToCommit.get(commitMessage);
+            commits.add(snap);
+            mapMessageToCommit.put(commitMessage,commits);
+        }else{
+            List<Snapshot> snapshots = new ArrayList<>();
+            snapshots.add(snap);
+            mapMessageToCommit.put(commitMessage,snapshots);
+        }
         //something may not be right!
 
         return null;
 
+    }
+
+    public Snapshot getCommitAtBranch(String branchName){
+        if(branchPointers.containsKey(branchName)){
+            return branchPointers.get(branchName);
+        }
+        return null;
     }
 
     public List<Snapshot> getCommitWithMessage(String message){
@@ -77,20 +101,46 @@ public class CommitTree {
     //not quite right!!
     public Snapshot getCommit(int commitID){
         //TODO: implement this
-        return null;
 
+        Snapshot currentSnapshot = branchPointers.get(currentBranchName);
+
+        while(!mappedCommits.containsKey(currentSnapshot)){
+            if(currentSnapshot.getId() == commitID){
+                return currentSnapshot;
+            }
+            currentSnapshot = mappedCommits.get(currentSnapshot);
+        }
+
+        return null;
 
     }
 
     public boolean fileIsInLastCommit(String filename){
         //TODO:
+        Snapshot lastcommit = branchPointers.get(currentBranchName);
+
+        for(FileInfo fileInfo: lastcommit.getFiles()){
+            if(fileInfo.getFilename().equals(filename)){
+                return true;
+            }
+        }
 
         return false;
 
     }
 
     public boolean fileNotModifiedSinceLastCommit(String filename){
-        //TODO:
+        File currentState = new File(GitVCS.RESOURCES_DIRECTORY+filename);
+
+        Snapshot lastCommit = branchPointers.get(currentBranchName);
+        if(fileIsInLastCommit(filename)){
+            String serializedFilename = lastCommit.getSerializedFile(filename);
+            File serializedFile = deserializer.deserializeTextFile(serializedFilename);
+            if(serializedFile.equals(currentState)){
+                return true;
+            }
+
+        }
 
         return false;
     }
@@ -148,11 +198,6 @@ public class CommitTree {
         }
     }
 
-    public Snapshot getLastSnapshot(){
-        //TODO
-        return null;
-
-    }
 
     public boolean branchExists(String branchName) {
 

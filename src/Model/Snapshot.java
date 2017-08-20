@@ -96,7 +96,7 @@ public class Snapshot {
         return false;
 
     }
-    public String getFile(String fileName){
+    public String getSerializedFile(String fileName){
         for(FileInfo f: files){
             if(f.getFilename().equals(fileName)){
                 return f.getSerializedFileName();
