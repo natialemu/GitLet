@@ -19,8 +19,9 @@ public class UnInitializedState implements GitLetStateMachine {
     public Void init() {
 
         File gitFile = new File(GitVCS.RESOURCES_DIRECTORY+".gitlet");
+        File settingsFile = new File(GitVCS.RESOURCES_DIRECTORY+".gitlet/commitTree.ser");
         try{
-            if(gitFile.exists()){
+            if(gitFile.exists() && settingsFile.exists()){
                 //
                 CommitTree commitTree = gitlet.getDeserializer().deserializeCommitTree();
 
@@ -32,7 +33,8 @@ public class UnInitializedState implements GitLetStateMachine {
             }else{
                 gitFile.mkdir();
                 gitlet.toInitializedState();
-                gitlet.commit("Initial Commit");
+                //gitlet.add(".gitlet");
+                //gitlet.commit("Initial Commit");
             }
 
             //call the first commit of gitlet here

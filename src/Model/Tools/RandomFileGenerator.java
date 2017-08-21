@@ -20,6 +20,7 @@ public class RandomFileGenerator {
             //PrintWriter writer = new PrintWriter(GitVCS.RESOURCES_DIRECTORY+filename,"UTF-8");
             File file = new File(GitVCS.RESOURCES_DIRECTORY+filename);
             file.createNewFile();
+            file.setWritable(true);
             populateText(filename);
 
         }catch (IOException ioe){
@@ -30,12 +31,13 @@ public class RandomFileGenerator {
 
     private static void populateText(String filename) {
         try {
-            FileWriter fileWriter = new FileWriter(filename);
+            FileWriter fileWriter = new FileWriter(GitVCS.RESOURCES_DIRECTORY+filename,true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
             bufferedWriter.write(randomText());
             bufferedWriter.write("\n");
             bufferedWriter.write(randomText());
+            bufferedWriter.flush();
         }catch (IOException ioe){
             ioe.printStackTrace();
         }

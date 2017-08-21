@@ -20,14 +20,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class SerializerImplTest {
     private SerializerImpl serializer;
 
-    private List<File> createdFiles;
+    private static List<File> createdFiles;
 
     private CommitTree commitTree;
 
     private GitVCS gitVCS;
 
     @BeforeAll
-    public void beforeClass(){
+    public static void beforeClass(){
         createdFiles = new ArrayList<>();
     }
     @BeforeEach
@@ -44,11 +44,13 @@ class SerializerImplTest {
 
         String firstFile = RandomFileGenerator.createRandomText();
 
+        String firstFileActual = firstFile.substring(0,firstFile.indexOf("."));
         File firstF = new File(GitVCS.RESOURCES_DIRECTORY+firstFile);
         createdFiles.add(firstF);
         assert (firstF.exists());
         int commitID1 = 0;
         String secondFile = RandomFileGenerator.createRandomText();
+        String secondFileActual = secondFile.substring(0,secondFile.indexOf("."));
 
         File secondF = new File(GitVCS.RESOURCES_DIRECTORY+secondFile);
         createdFiles.add(secondF);
@@ -56,13 +58,13 @@ class SerializerImplTest {
         int commitID2 = 1;
 
         serializer.serializeTextFile(firstFile,commitID1);
-        File file = new File(GitVCS.RESOURCES_DIRECTORY+".gitlet/"+firstFile+commitID1+".ser");
+        File file = new File(GitVCS.RESOURCES_DIRECTORY+".gitlet/"+firstFileActual+commitID1+".ser");
         createdFiles.add(file);
         assert (file.exists());
 
         serializer.serializeTextFile(secondFile,commitID2);
 
-        file = new File(GitVCS.RESOURCES_DIRECTORY+".gitlet/"+secondFile+commitID2+".ser");
+        file = new File(GitVCS.RESOURCES_DIRECTORY+".gitlet/"+secondFileActual+commitID2+".ser");
         assert (file.exists());
         createdFiles.add(file);
         //create a textfile
@@ -86,11 +88,13 @@ class SerializerImplTest {
 
     @AfterEach
     public void tearDown(){
-        for(File f: createdFiles){
-            f.delete();
+        File file = new File(GitVCS.RESOURCES_DIRECTORY+".gitlet/");
+        if(file.isDirectory()){
+            File[] files = file.listFiles();
+            for(File f: files){
+                f.delete();
+            }
         }
-        File f = new File(GitVCS.RESOURCES_DIRECTORY+".gitlet");
-        f.delete();
 
     }
 

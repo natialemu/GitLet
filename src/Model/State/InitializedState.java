@@ -49,7 +49,7 @@ public class InitializedState implements GitLetStateMachine{
                 System.out.println("File is already inside working directory");
             }else{
 
-                if(tree.fileIsInLastCommit(filename) && tree.fileNotModifiedSinceLastCommit(filename)){
+                if(tree.fileIsInLastCommit(filename) && fileNotModifiedSinceLastCommit(filename)){
                     System.out.println("File has not been modified since last commit");
                 }else if(tree.getLastCommit().isFileMarked(filename)){
                     tree.getLastCommit().unMarkFile(filename);
@@ -469,5 +469,22 @@ public class InitializedState implements GitLetStateMachine{
     public void setCommitTree(CommitTree commitTree) {
 
         tree = commitTree;
+    }
+    public boolean fileNotModifiedSinceLastCommit(String filename){
+        File currentState = new File(GitVCS.RESOURCES_DIRECTORY+filename);
+        long lastModifiedOfCurentState = currentState.lastModified();
+
+        Snapshot lastCommit = tree.getCommitAtBranch(tree.getCurrentBranch());
+        if(tree.fileIsInLastCommit(filename)){
+            String serializedFilename = lastCommit.getSerializedFile(filename);
+            // File serializedFile = deserializer.deserializeTextFile(serializedFilename);
+            long lastModifiedDesesiralized = 8;//serializedFile.lastModified();
+            if(lastModifiedOfCurentState == lastModifiedDesesiralized){
+                return true;
+            }
+
+        }
+
+        return false;
     }
 }

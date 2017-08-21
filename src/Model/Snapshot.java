@@ -1,17 +1,21 @@
 package Model;
 
 import Model.FileModel.FileInfo;
+import Repository.Serializer;
 
 import java.io.File;
+import java.io.Serializable;
 import java.util.*;
 
 /**
  * Created by Nathnael on 8/17/2017.
  */
-public class Snapshot {
+public class Snapshot implements Serializable{
     private List<FileInfo> files;
     private final Date dateCreated;
-    private final int id;
+    private int id;
+
+
 
     public String getCommitMessage() {
         return commitMessage;
@@ -55,6 +59,12 @@ public class Snapshot {
         return id;
     }
 
+    @Override
+    public String toString() {
+        return "Snapshot {" +
+                "id=" + id +
+                '}';
+    }
 
     public boolean exists(String filename){
         for(FileInfo file : files){
@@ -109,6 +119,28 @@ public class Snapshot {
         return files;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
-    //the methods go here!!!
+        Snapshot snapshot = (Snapshot) o;
+
+        if (id != snapshot.id) return false;
+        if (files != null ? !files.equals(snapshot.files) : snapshot.files != null) return false;
+        if (dateCreated != null ? !dateCreated.equals(snapshot.dateCreated) : snapshot.dateCreated != null)
+            return false;
+        return commitMessage != null ? commitMessage.equals(snapshot.commitMessage) : snapshot.commitMessage == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = files != null ? files.hashCode() : 0;
+        result = 31 * result + (dateCreated != null ? dateCreated.hashCode() : 0);
+        result = 31 * result + id;
+        result = 31 * result + (commitMessage != null ? commitMessage.hashCode() : 0);
+        return result;
+    }
+
+//the methods go here!!!
 }

@@ -66,13 +66,14 @@ class CommitTreeTest {
         commitTree.addSnapshotToTree(secondSnapshot);
 
         Snapshot returnedSnapshot = commitTree.getLastCommit();
-        assertEquals(returnedSnapshot,secondSnapshot);
+        assertEquals(returnedSnapshot.getId(),secondSnapshot.getId());
 
         String commitMessage3 = "third message";
         Snapshot thirdSnapshot = new Snapshot(04,commitMessage3);
+        commitTree.addSnapshotToTree(thirdSnapshot);
 
         returnedSnapshot = commitTree.getLastCommit();
-        assertEquals(returnedSnapshot,thirdSnapshot);
+        assertEquals(returnedSnapshot.getId(),thirdSnapshot.getId());
 
     }
 
@@ -81,25 +82,26 @@ class CommitTreeTest {
     void getCommit() {
 
         String commitMessage = "first commit message";
-        Snapshot snapshot = new Snapshot(00,commitMessage);
+        Snapshot snapshot = new Snapshot(0,commitMessage);
         commitTree.addSnapshotToTree(snapshot);
 
         String commitMessage2 = "second message";
-        Snapshot secondSnapshot = new Snapshot(02,commitMessage2);
+        Snapshot secondSnapshot = new Snapshot(2,commitMessage2);
         commitTree.addSnapshotToTree(secondSnapshot);
 
-        Snapshot returnedSnapshot = commitTree.getCommit(00);
+        Snapshot returnedSnapshot = commitTree.getCommit(0);
         assertEquals(returnedSnapshot,snapshot);
 
         String commitMessage3 = "third message";
-        Snapshot thirdSnapshot = new Snapshot(04,commitMessage3);
+        Snapshot thirdSnapshot = new Snapshot(4,commitMessage3);
+        commitTree.addSnapshotToTree(thirdSnapshot);
 
-        returnedSnapshot = commitTree.getCommit(04);
+        returnedSnapshot = commitTree.getCommit(4);
         assertEquals(returnedSnapshot,thirdSnapshot);
     }
 
     @Test
-    public void getSplitPoint(String branchName){
+    public void getSplitPoint(){
         //commit 5 snapshots
         //add a branch
         //commit again on both branches
@@ -118,9 +120,7 @@ class CommitTreeTest {
         Snapshot snapshot3 = new Snapshot(10,commitMessage3);
         commitTree.addSnapshotToTree(snapshot3);
 
-        String commitMessage4 = "fourth message";
-        Snapshot secondSnapshot4 = new Snapshot(12,commitMessage4);
-        commitTree.addSnapshotToTree(secondSnapshot4);
+
 
         String commitMessage5 = "fifth message";
         Snapshot snapshot5 = new Snapshot(13,commitMessage5);
@@ -132,11 +132,15 @@ class CommitTreeTest {
         commitTree.addBranch("develop");
         commitTree.addSnapshotToTree(new Snapshot(15,"sixth on master commit"));
 
+        String commitMessage4 = "fourth message";
+        Snapshot secondSnapshot4 = new Snapshot(12,commitMessage4);
+        commitTree.addSnapshotToTree(secondSnapshot4);
+        
         //change branch
         commitTree.setCurrentBranchName("develop");
         commitTree.addSnapshotToTree(new Snapshot(16,"sixth on develop commit"));
 
-        Snapshot expectedSplitPoint = commitTree.getSplitPoint("develop");
+        Snapshot expectedSplitPoint = commitTree.getSplitPoint("Master");
 
         assertEquals(expectedSplitPoint,actualSplitPoint);
 

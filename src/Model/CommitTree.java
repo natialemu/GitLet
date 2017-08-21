@@ -16,7 +16,7 @@ import java.util.*;
 public class CommitTree implements Serializable {
     private HashMap<String,Snapshot> branchPointers;
     private HashMap<Snapshot,Snapshot> mappedCommits;
-    Deserializer deserializer;
+    //Deserializer deserializer;
 
     //useful for efficiently executing finc command
     private HashMap<String, List<Snapshot>> mapMessageToCommit;
@@ -33,7 +33,7 @@ public class CommitTree implements Serializable {
         branchPointers = new HashMap<>();
         mappedCommits  = new HashMap<>();
         mapMessageToCommit = new HashMap();
-        deserializer = new DeserializerImpl();
+        //deserializer = new DeserializerImpl();
 
         // commitTree = new ArrayList<>();
         currentBranchName = "Master";//by default should be master
@@ -84,12 +84,7 @@ public class CommitTree implements Serializable {
     }
 
     public Snapshot getLastCommit(){
-        if(mappedCommits.size() > 0){
-            return mappedCommits.get(branchPointers.get(currentBranchName));
-        }
-        else {
-            return null;
-        }
+        return branchPointers.get(currentBranchName);
 
     }
 
@@ -104,8 +99,9 @@ public class CommitTree implements Serializable {
 
         Snapshot currentSnapshot = branchPointers.get(currentBranchName);
 
-        while(!mappedCommits.containsKey(currentSnapshot)){
-            if(currentSnapshot.getId() == commitID){
+        while(mappedCommits.containsKey(currentSnapshot)){
+            int currentSnapId = currentSnapshot.getId();
+            if(currentSnapId == commitID){
                 return currentSnapshot;
             }
             currentSnapshot = mappedCommits.get(currentSnapshot);
@@ -113,6 +109,31 @@ public class CommitTree implements Serializable {
 
         return null;
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        CommitTree that = (CommitTree) o;
+
+        if (branchPointers != null ? !branchPointers.equals(that.branchPointers) : that.branchPointers != null)
+            return false;
+        if (mappedCommits != null ? !mappedCommits.equals(that.mappedCommits) : that.mappedCommits != null)
+            return false;
+        if (mapMessageToCommit != null ? !mapMessageToCommit.equals(that.mapMessageToCommit) : that.mapMessageToCommit != null)
+            return false;
+        return currentBranchName != null ? currentBranchName.equals(that.currentBranchName) : that.currentBranchName == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = branchPointers != null ? branchPointers.hashCode() : 0;
+        result = 31 * result + (mappedCommits != null ? mappedCommits.hashCode() : 0);
+        result = 31 * result + (mapMessageToCommit != null ? mapMessageToCommit.hashCode() : 0);
+        result = 31 * result + (currentBranchName != null ? currentBranchName.hashCode() : 0);
+        return result;
     }
 
     public boolean fileIsInLastCommit(String filename){
@@ -129,21 +150,16 @@ public class CommitTree implements Serializable {
 
     }
 
-    public boolean fileNotModifiedSinceLastCommit(String filename){
-        File currentState = new File(GitVCS.RESOURCES_DIRECTORY+filename);
-
-        Snapshot lastCommit = branchPointers.get(currentBranchName);
-        if(fileIsInLastCommit(filename)){
-            String serializedFilename = lastCommit.getSerializedFile(filename);
-            File serializedFile = deserializer.deserializeTextFile(serializedFilename);
-            if(serializedFile.equals(currentState)){
-                return true;
-            }
-
-        }
-
-        return false;
+    @Override
+    public String toString() {
+        return "CommitTree{" +
+                "branchPointers=" + branchPointers +
+                ", mappedCommits=" + mappedCommits +
+                ", mapMessageToCommit=" + mapMessageToCommit +
+                ", currentBranchName='" + currentBranchName + '\'' +
+                '}';
     }
+
     private void printLog(Snapshot currentCommit, int i){
         System.out.println("=====");
         System.out.println();
@@ -249,6 +265,7 @@ public class CommitTree implements Serializable {
         //TODO
     }
 
+
     public Snapshot getLastCommit(String branch){
         return branchPointers.get(branch);
     }
@@ -258,10 +275,10 @@ public class CommitTree implements Serializable {
 
         Snapshot currentCommit = branchPointers.get(currentBranchName);
         Snapshot givenCommit = branchPointers.get(brachName);
-        visitedCommit.add(currentCommit);
-        visitedCommit.add(givenCommit);
+        //visitedCommit.add(currentCommit);
+       // visitedCommit.add(givenCommit);
         Snapshot splitPoint = null;
-        while(!mappedCommits.containsKey(currentCommit) || !mappedCommits.containsKey(givenCommit)){
+        while(mappedCommits.containsKey(currentCommit) && mappedCommits.containsKey(givenCommit)){
             if(!visitedCommit.contains(currentCommit)){
                 visitedCommit.add(currentCommit);
             }else{

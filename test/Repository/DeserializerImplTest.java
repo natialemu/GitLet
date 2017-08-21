@@ -56,11 +56,14 @@ class DeserializerImplTest {
         CommitTree commitTree = new CommitTree();
         commitTree.addSnapshotToTree(new Snapshot(2,"test message"));
 
+        String branchCommitTree = commitTree.getCurrentBranch();
         serializer.serializeCommitTree(commitTree);
 
         CommitTree deserializedCommitTree = deserializer.deserializeCommitTree();
 
-        assert(commitTree.equals(deserializedCommitTree));
+        String branchDeserializedTree = deserializedCommitTree.getCurrentBranch();
+        assertEquals(commitTree,deserializedCommitTree);
+        //assertEquals(branchCommitTree,branchDeserializedTree);
 
     }
 

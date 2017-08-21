@@ -2,10 +2,12 @@ package Model.State;
 
 import Model.CommitTree;
 
+import java.io.Serializable;
+
 /**
  * Created by Nathnael on 8/17/2017.
  */
-public interface GitLetStateMachine {
+public interface GitLetStateMachine extends Serializable{
     Void init();
     Void add(String filename);
     Void commit(String message);

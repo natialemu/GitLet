@@ -29,7 +29,7 @@ public class GitVCS {
 
     private Serializer serializer;
 
-    public static final String RESOURCES_DIRECTORY = "./workingDirectory";
+    public static final String RESOURCES_DIRECTORY = "./workingDirectory/";
 
     public void setCommitTree(CommitTree commitTree){
         currentState.setCommitTree(commitTree);

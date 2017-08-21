@@ -18,17 +18,18 @@ public class SerializerImpl implements Serializer {
     public String serializeTextFile(String filename, int commitID) {
         File toBeSerialized = new File(GitVCS.RESOURCES_DIRECTORY + filename);
         String newFilename = filename.substring(0, filename.indexOf('.'));
-        String serializedName = newFilename + ".ser";
+        String serializedName = newFilename + commitID+".ser";
         if (!toBeSerialized.exists()) {
             return null;
         }
         try {
-            FileOutputStream fileout = new FileOutputStream(GitVCS.RESOURCES_DIRECTORY + ".gitlet/" + newFilename + commitID + ".ser");
+            FileOutputStream fileout = new FileOutputStream(GitVCS.RESOURCES_DIRECTORY +".gitlet/" + serializedName);
             ObjectOutputStream output = new ObjectOutputStream(fileout);
             output.writeObject(toBeSerialized);
+            output.flush();
             output.close();
             fileout.close();
-            ;
+
 
 
         } catch (IOException io) {

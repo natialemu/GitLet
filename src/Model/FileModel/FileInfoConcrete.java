@@ -11,6 +11,28 @@ public class FileInfoConcrete implements FileInfo{
     private boolean taggedForRemoval;
     private String serializedFileName;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        FileInfoConcrete that = (FileInfoConcrete) o;
+
+        if (taggedForRemoval != that.taggedForRemoval) return false;
+        if (filename != null ? !filename.equals(that.filename) : that.filename != null) return false;
+        if (dateCreated != null ? !dateCreated.equals(that.dateCreated) : that.dateCreated != null) return false;
+        return serializedFileName != null ? serializedFileName.equals(that.serializedFileName) : that.serializedFileName == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = filename != null ? filename.hashCode() : 0;
+        result = 31 * result + (dateCreated != null ? dateCreated.hashCode() : 0);
+        result = 31 * result + (taggedForRemoval ? 1 : 0);
+        result = 31 * result + (serializedFileName != null ? serializedFileName.hashCode() : 0);
+        return result;
+    }
+
     public FileInfoConcrete(String filename, String serializedFileName){
         this.filename = filename;
         this.serializedFileName = serializedFileName;
