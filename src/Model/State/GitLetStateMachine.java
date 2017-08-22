@@ -27,4 +27,6 @@ public interface GitLetStateMachine extends Serializable{
     Void interactiveRebase(String brachName);
 
     void setCommitTree(CommitTree commitTree);
+
+    boolean isBranchName(String argument);
 }

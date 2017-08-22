@@ -137,4 +137,9 @@ public class UnInitializedState implements GitLetStateMachine {
     public void setCommitTree(CommitTree commitTree) {
         tree = commitTree;
     }
+
+    @Override
+    public boolean isBranchName(String argument) {
+        return false;
+    }
 }

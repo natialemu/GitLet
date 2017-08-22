@@ -113,4 +113,10 @@ public class GitLetFacade implements GitLet {
         gitlet.interactiveRebase(branchName);
         return null;
     }
+
+    @Override
+    public boolean isBranchName(String argument) {
+
+        return gitlet.isBranchName(argument);
+    }
 }

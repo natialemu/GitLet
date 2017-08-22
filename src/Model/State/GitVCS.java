@@ -169,4 +169,8 @@ public class GitVCS {
         currentState.interactiveRebase(branchName);
         return null;
     }
+
+    public boolean isBranchName(String argument) {
+        return currentState.isBranchName(argument);
+    }
 }

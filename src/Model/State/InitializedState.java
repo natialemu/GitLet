@@ -457,6 +457,13 @@ public class InitializedState implements GitLetStateMachine{
 
         tree = commitTree;
     }
+
+    @Override
+    public boolean isBranchName(String argument) {
+
+        return tree.getBranches().contains(argument);
+    }
+
     public boolean fileNotModifiedSinceLastCommit(String filename){
         File currentState = new File(GitVCS.RESOURCES_DIRECTORY+filename);
         long lastModifiedOfCurentState = currentState.lastModified();

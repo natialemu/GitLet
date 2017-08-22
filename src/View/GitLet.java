@@ -21,4 +21,7 @@ public interface GitLet {
     Void merge(String brachName);
     Void rebase(String brachName);
     Void interactiveRebase(String brachName);
+
+    boolean isBranchName(String argument);
+
 }

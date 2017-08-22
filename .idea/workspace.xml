@@ -2,46 +2,230 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="415940b4-5ac3-4c2f-bf6c-a616a21c8aa4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/SPTWQWOR0.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/ZQHLOYDO1.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/GHVUFJCR.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/NPAQTFQL.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/OVAKWWSQ.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/QLLBMSBZ.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/SHRGGYTO.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/SPTWQWOR.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/TCFGIWWY.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/ZQHLOYDO.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/JFRMEFLQ0.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/MYZRHJRI1.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/SPTWQWOR0.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/ZQHLOYDO1.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/GHVUFJCR.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/JFRMEFLQ.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/MYZRHJRI.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/NPAQTFQL.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/OVAKWWSQ.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/QLLBMSBZ.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/SHRGGYTO.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/SPTWQWOR.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/TCFGIWWY.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/ZQHLOYDO.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/AAZJPUYZ2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/AAZJPUYZ2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/BCKLBBPX2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/BCKLBBPX2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/CJMTZUAX2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/DTXHHBCT2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/ERKSPPLO2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/FMUPJAXM2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/FNNGOMXA1.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/FOTNHVVJ2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/FOTNHVVJ2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/GTNLSKLD2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/HSQXAFJR2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/HVPZTVFO2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/IBFTPTGR2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/KGHKRYHI2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/KGHKRYHI3.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/LCZFVUIJ2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/LCZFVUIJ2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/LDCJYMIZ2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/LDCJYMIZ2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/LOFEUJCN2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/LOFEUJCN2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/MFBBSMDI2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/NSIAVKEM2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/PPMVUKSO0.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/QCPINNAL2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/QJBDFEQV2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/QOHVPEFN2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/QOHVPEFN2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/QSSYOPQF2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/QSSYOPQF2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/RXDRVODM2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/SDXBAVCW2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/SGOBSTHD2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/SRAGJUIW2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/STBAKUMM2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/TSEUWVRQ2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/WGVRRCKA2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/WGVRRCKA2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/XBDIOKPI2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/XPAQNRSP2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/XRKZGPEF2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/XRKZGPEF2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/YIDXMXUB2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/YNRHQDLX2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/YNRHQDLX2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/ZHUUTPCP2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/ZHUUTPCP2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/GitLet/.gitlet/commitTree.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/AAZJPUYZ2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/AAZJPUYZ2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/BCKLBBPX2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/BCKLBBPX2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/CJMTZUAX2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/DTXHHBCT2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/ERKSPPLO2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/FMUPJAXM2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/FNNGOMXA1.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/FOTNHVVJ2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/FOTNHVVJ2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/GTNLSKLD2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/HSQXAFJR2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/HVPZTVFO2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/IBFTPTGR2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/KGHKRYHI2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/KGHKRYHI3.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/LCZFVUIJ2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/LCZFVUIJ2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/LDCJYMIZ2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/LDCJYMIZ2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/LOFEUJCN2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/LOFEUJCN2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/MFBBSMDI2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/NSIAVKEM2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/PPMVUKSO0.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/QCPINNAL2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/QJBDFEQV2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/QOHVPEFN2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/QOHVPEFN2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/QSSYOPQF2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/QSSYOPQF2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/RXDRVODM2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/SDXBAVCW2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/SGOBSTHD2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/SRAGJUIW2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/STBAKUMM2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/TSEUWVRQ2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/UNECCBJS2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/UNECCBJS2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/WGVRRCKA2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/WGVRRCKA2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/XBDIOKPI2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/XGUEDSHY2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/XGUEDSHY2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/XPAQNRSP2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/XRKZGPEF2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/XRKZGPEF2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/YIDXMXUB2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/YNRHQDLX2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/YNRHQDLX2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/YUIMSIQV2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/YUIMSIQV2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/ZHUUTPCP2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/ZHUUTPCP2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/ZSKNTVZX2.ser" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/ZSKNTVZX2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/AAZJPUYZ.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/AGZXZZUT.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/APWQEISI.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/AWKXQWQT.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/BCKLBBPX.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/BHPIMJUE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/BTHZBNBX.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/BZDKPRHM.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/CJMTZUAX.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/CLEKRUHZ.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/DTXHHBCT.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/DXQCWCUN.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/EELMTODB.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/ERKSPPLO.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/FMUPJAXM.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/FNNGOMXA.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/FOTNHVVJ.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/FQMTVOMK.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/GCFOMSRY.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/GGZVLDUS.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/GLYJRZOZ.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/GTNLSKLD.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/HBGXWSXO.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/HOQFCZUU.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/HSQXAFJR.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/HVPZTVFO.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/IBFTPTGR.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/IJKKNBRK.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/ILHUDKNF.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/INMZTQLE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/JBAYDCLP.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/JGAFLYUT.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/JNAHITYC.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/JNOAQSCX.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/JXEGWCEP.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/KGHKRYHI.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/KIAGYJIF.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/LCZFVUIJ.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/LDCJYMIZ.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/LMKVXKOH.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/LOFEUJCN.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/LOHYJPJL.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/LTDIXWAW.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/MFBBSMDI.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/MMIXIRWI.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/MOGSUBUS.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/MSBWXOTL.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/MVYAAANO.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/NSIAVKEM.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/NWQWVILO.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/OJIWHGNQ.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/OLIPLAFN.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/PPMVUKSO.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/PVBOGMST.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/QCPINNAL.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/QJBDFEQV.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/QMZGPTCI.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/QOHVPEFN.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/QSSYOPQF.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/RLNYRPQC.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/RXDRVODM.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/SDXBAVCW.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/SGOBSTHD.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/SHRMDGCZ.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/SLWPYNRO.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/SRAGJUIW.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/STBAKUMM.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/TGJTJSSN.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/THLMTDDP.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/TJAFWWND.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/TLTCIYHI.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/TSEUWVRQ.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/TWAZEHTB.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/TXGSYUVX.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/TYKDLBTY.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/UAUWYHEV.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/UNECCBJS.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/UPTVYLSA.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/UXTZUIDW.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/VLEPULKO.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/VPSWZPGN.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/VSWRMSCD.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/WGVRRCKA.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/XBDIOKPI.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/XCLCWQBI.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/XGUEDSHY.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/XKDIFLYD.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/XPAQNRSP.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/XRKZGPEF.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/XUYSUBDW.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/XZWNPZLR.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/YBOVCPBW.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/YHEFBZQO.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/YIDXMXUB.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/YKISAEVL.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/YNRHQDLX.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/YUIMSIQV.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/ZHUUTPCP.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/ZQMPDBCG.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/ZSKNTVZX.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/workingDirectory/ZYNYKCTM.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GitLet/Model/State/GitLetStateMachine.class" afterPath="$PROJECT_DIR$/out/production/GitLet/Model/State/GitLetStateMachine.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GitLet/Model/State/GitVCS.class" afterPath="$PROJECT_DIR$/out/production/GitLet/Model/State/GitVCS.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GitLet/Model/State/InitializedState.class" afterPath="$PROJECT_DIR$/out/production/GitLet/Model/State/InitializedState.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/GitLet/Model/State/InitializedStateTest.class" afterPath="$PROJECT_DIR$/out/test/GitLet/Model/State/InitializedStateTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GitLet/Model/State/UnInitializedState.class" afterPath="$PROJECT_DIR$/out/production/GitLet/Model/State/UnInitializedState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GitLet/View/GitLet.class" afterPath="$PROJECT_DIR$/out/production/GitLet/View/GitLet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GitLet/View/GitLetFacade.class" afterPath="$PROJECT_DIR$/out/production/GitLet/View/GitLetFacade.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/GitLet/View/Main.class" afterPath="$PROJECT_DIR$/out/production/GitLet/View/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workingDirectory/.gitlet/commitTree.ser" afterPath="$PROJECT_DIR$/workingDirectory/.gitlet/commitTree.ser" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/CommitTree.java" afterPath="$PROJECT_DIR$/src/Model/CommitTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Snapshot.java" afterPath="$PROJECT_DIR$/src/Model/Snapshot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/State/GitLetStateMachine.java" afterPath="$PROJECT_DIR$/src/Model/State/GitLetStateMachine.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/State/GitVCS.java" afterPath="$PROJECT_DIR$/src/Model/State/GitVCS.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/State/InitializedState.java" afterPath="$PROJECT_DIR$/src/Model/State/InitializedState.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/State/UnInitializedState.java" afterPath="$PROJECT_DIR$/src/Model/State/UnInitializedState.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Tools/IDGenerator.java" afterPath="$PROJECT_DIR$/src/Model/Tools/IDGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Tools/RandomFileGenerator.java" afterPath="$PROJECT_DIR$/src/Model/Tools/RandomFileGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Repository/DeserializerImpl.java" afterPath="$PROJECT_DIR$/src/Repository/DeserializerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Repository/SerializerImpl.java" afterPath="$PROJECT_DIR$/src/Repository/SerializerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/GitLet.java" afterPath="$PROJECT_DIR$/src/View/GitLet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/GitLetFacade.java" afterPath="$PROJECT_DIR$/src/View/GitLetFacade.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/Main.java" afterPath="$PROJECT_DIR$/src/View/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/Model/State/InitializedStateTest.java" afterPath="$PROJECT_DIR$/test/Model/State/InitializedStateTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,20 +243,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-          <file leaf-file-name="InitializedState.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Model/State/InitializedState.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="457">
-                  <caret line="268" column="0" lean-forward="false" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CommitTree.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="CommitTree.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Model/CommitTree.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="350">
+                <state relative-caret-position="6983">
                   <caret line="407" column="44" lean-forward="false" selection-start-line="407" selection-start-column="44" selection-end-line="407" selection-end-column="44" />
                   <folding />
                 </state>
@@ -83,7 +257,7 @@
             <entry file="file://$PROJECT_DIR$/src/Repository/DeserializerImpl.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="359">
-                  <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+                  <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
                   <folding />
                 </state>
               </provider>
@@ -102,9 +276,12 @@
           <file leaf-file-name="UnInitializedState.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Model/State/UnInitializedState.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="660">
-                  <caret line="67" column="8" lean-forward="false" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
-                  <folding />
+                <state relative-caret-position="614">
+                  <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#2898#2899#0" expanded="true" />
+                    <element signature="e#2926#2927#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -135,8 +312,21 @@
           <file leaf-file-name="GitVCS.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Model/State/GitVCS.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="308">
-                  <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+                <state relative-caret-position="788">
+                  <caret line="173" column="40" lean-forward="false" selection-start-line="173" selection-start-column="28" selection-end-line="173" selection-end-column="40" />
+                  <folding>
+                    <element signature="e#3528#3529#0" expanded="true" />
+                    <element signature="e#3586#3587#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GitLetStateMachine.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Model/State/GitLetStateMachine.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="783">
+                  <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
                   <folding />
                 </state>
               </provider>
@@ -155,37 +345,25 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DelegatingMethodAccessorImpl.class" pinned="false" current-in-tab="false">
-            <entry file="jar://$JAVA$/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+          <file leaf-file-name="InitializedState.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Model/State/InitializedState.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
-                  <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+                <state relative-caret-position="330">
+                  <caret line="132" column="0" lean-forward="true" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
           <file leaf-file-name="InitializedStateTest.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/test/Model/State/InitializedStateTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1100">
-                  <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="NativeMethodAccessorImpl.class" pinned="false" current-in-tab="false">
-            <entry file="jar://$JAVA$/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="678">
-                  <caret line="37" column="33" lean-forward="false" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+                <state relative-caret-position="297">
+                  <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
                   <folding />
                 </state>
               </provider>
@@ -194,8 +372,8 @@
           <file leaf-file-name="GitLetFacade.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/View/GitLetFacade.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="858">
-                  <caret line="111" column="51" lean-forward="false" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
+                <state relative-caret-position="2937">
+                  <caret line="94" column="31" lean-forward="false" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -204,11 +382,21 @@
           <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/View/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="717">
-                  <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+                <state relative-caret-position="396">
+                  <caret line="42" column="63" lean-forward="false" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GitLet.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/View/GitLet.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="816">
+                  <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -257,7 +445,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/View/GitLet.java" />
         <option value="$PROJECT_DIR$/test/Model/SnapshotTest.java" />
         <option value="$PROJECT_DIR$/test/Model/State/UnInitializedStateTest.java" />
         <option value="$PROJECT_DIR$/src/Repository/Serializer.java" />
@@ -265,21 +452,22 @@
         <option value="$PROJECT_DIR$/test/Model/CommitTreeTest.java" />
         <option value="$PROJECT_DIR$/test/Repository/SerializerImplTest.java" />
         <option value="$PROJECT_DIR$/src/Model/FileModel/FileInfo.java" />
-        <option value="$PROJECT_DIR$/src/Model/State/GitLetStateMachine.java" />
         <option value="$PROJECT_DIR$/src/Repository/Deserializer.java" />
         <option value="$PROJECT_DIR$/test/Repository/DeserializerImplTest.java" />
         <option value="$PROJECT_DIR$/src/Model/FileModel/FileInfoConcrete.java" />
-        <option value="$PROJECT_DIR$/src/View/GitLetFacade.java" />
         <option value="$PROJECT_DIR$/src/Model/Snapshot.java" />
-        <option value="$PROJECT_DIR$/src/Model/State/GitVCS.java" />
         <option value="$PROJECT_DIR$/src/Model/Tools/IDGenerator.java" />
         <option value="$PROJECT_DIR$/src/Model/CommitTree.java" />
-        <option value="$PROJECT_DIR$/src/Model/State/UnInitializedState.java" />
         <option value="$PROJECT_DIR$/src/Repository/DeserializerImpl.java" />
         <option value="$PROJECT_DIR$/src/Model/Tools/RandomFileGenerator.java" />
-        <option value="$PROJECT_DIR$/src/Model/State/InitializedState.java" />
         <option value="$PROJECT_DIR$/test/Model/State/InitializedStateTest.java" />
         <option value="$PROJECT_DIR$/src/Repository/SerializerImpl.java" />
+        <option value="$PROJECT_DIR$/src/View/GitLet.java" />
+        <option value="$PROJECT_DIR$/src/View/GitLetFacade.java" />
+        <option value="$PROJECT_DIR$/src/Model/State/GitVCS.java" />
+        <option value="$PROJECT_DIR$/src/Model/State/GitLetStateMachine.java" />
+        <option value="$PROJECT_DIR$/src/Model/State/InitializedState.java" />
+        <option value="$PROJECT_DIR$/src/Model/State/UnInitializedState.java" />
         <option value="$PROJECT_DIR$/src/View/Main.java" />
       </list>
     </option>
@@ -503,7 +691,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.InitializedStateTest.checkout">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="InitializedStateTest.checkout" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -517,32 +705,6 @@
       <option name="PACKAGE_NAME" value="Model.State" />
       <option name="MAIN_CLASS_NAME" value="Model.State.InitializedStateTest" />
       <option name="METHOD_NAME" value="checkout" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="InitializedStateTest.copyFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Model.State.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="GitLet" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Model.State" />
-      <option name="MAIN_CLASS_NAME" value="Model.State.InitializedStateTest" />
-      <option name="METHOD_NAME" value="copyFile" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -632,6 +794,26 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="View.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="View.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="GitLet" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -891,18 +1073,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.InitializedStateTest.checkout" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.InitializedStateTest.copyFile" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.InitializedStateTest.rmBranch" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.InitializedStateTest.reset" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.DeserializerImplTest.deserializeTextFile" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.InitializedStateTest.rmBranch" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.InitializedStateTest.reset" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.DeserializerImplTest.deserializeTextFile" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.InitializedStateTest.checkout" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.DeserializerImplTest.deserializeTextFile" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.InitializedStateTest.reset" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.InitializedStateTest.rmBranch" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.InitializedStateTest.copyFile" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.InitializedStateTest.checkout" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DeserializerImplTest.deserializeTextFile" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.InitializedStateTest.reset" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.InitializedStateTest.rmBranch" />
       </list>
     </recent_temporary>
   </component>
@@ -928,35 +1110,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DeserializerImplTest_deserializeTextFile - 2017.08.21 at 18h 59m 58s.xml">
-      <configuration name="DeserializerImplTest.deserializeTextFile" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InitializedStateTest_checkout - 2017.08.21 at 18h 34m 27s.xml">
-      <configuration name="InitializedStateTest.checkout" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InitializedStateTest_checkout - 2017.08.21 at 18h 37m 00s.xml">
-      <configuration name="InitializedStateTest.checkout" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InitializedStateTest_checkout - 2017.08.22 at 09h 59m 55s.xml">
-      <configuration name="InitializedStateTest.checkout" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="InitializedStateTest_checkout - 2017.08.22 at 10h 00m 50s.xml">
       <configuration name="InitializedStateTest.checkout" configurationId="JUnit" />
     </history-entry>
     <history-entry file="InitializedStateTest_checkout - 2017.08.22 at 10h 01m 35s.xml">
       <configuration name="InitializedStateTest.checkout" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InitializedStateTest_copyFile - 2017.08.21 at 18h 38m 37s.xml">
-      <configuration name="InitializedStateTest.copyFile" configurationId="JUnit" />
+    <history-entry file="InitializedStateTest_checkout - 2017.08.22 at 11h 24m 54s.xml">
+      <configuration name="InitializedStateTest.checkout" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InitializedStateTest_copyFile - 2017.08.21 at 18h 41m 19s.xml">
-      <configuration name="InitializedStateTest.copyFile" configurationId="JUnit" />
+    <history-entry file="InitializedStateTest_checkout - 2017.08.22 at 11h 25m 04s.xml">
+      <configuration name="InitializedStateTest.checkout" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InitializedStateTest_reset - 2017.08.21 at 18h 41m 53s.xml">
-      <configuration name="InitializedStateTest.reset" configurationId="JUnit" />
+    <history-entry file="InitializedStateTest_checkout - 2017.08.22 at 11h 25m 06s.xml">
+      <configuration name="InitializedStateTest.checkout" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InitializedStateTest_rmBranch - 2017.08.21 at 18h 41m 42s.xml">
-      <configuration name="InitializedStateTest.rmBranch" configurationId="JUnit" />
+    <history-entry file="InitializedStateTest_checkout - 2017.08.22 at 11h 25m 09s.xml">
+      <configuration name="InitializedStateTest.checkout" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InitializedStateTest_checkout - 2017.08.22 at 11h 25m 10s.xml">
+      <configuration name="InitializedStateTest.checkout" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InitializedStateTest_rm - 2017.08.22 at 11h 24m 44s.xml">
+      <configuration name="InitializedStateTest.rm" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InitializedStateTest_rm - 2017.08.22 at 11h 24m 49s.xml">
+      <configuration name="InitializedStateTest.rm" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InitializedStateTest_rm - 2017.08.22 at 11h 25m 01s.xml">
+      <configuration name="InitializedStateTest.rm" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -972,7 +1154,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32978094" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978094" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3268206" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -983,7 +1165,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39964476" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39964476" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1005,11 +1187,47 @@
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/View/Main.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/View/GitLetFacade.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Model/State/InitializedState.java</url>
+          <line>96</line>
+          <properties />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Model/State/InitializedState.java</url>
+          <line>111</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Model/State/InitializedState.java</url>
+          <line>136</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Model/State/InitializedState.java</url>
+          <line>146</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="42" />
+      <option name="time" value="48" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1051,9 +1269,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10626">
           <caret line="333" column="29" lean-forward="false" selection-start-line="333" selection-start-column="29" selection-end-line="333" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1109,7 +1325,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2508">
           <caret line="106" column="1" lean-forward="false" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="e#2898#2899#0" expanded="true" />
+            <element signature="e#2926#2927#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1117,7 +1336,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4092">
           <caret line="125" column="5" lean-forward="false" selection-start-line="125" selection-start-column="5" selection-end-line="125" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#3528#3529#0" expanded="true" />
+            <element signature="e#3586#3587#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1199,7 +1421,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2508">
           <caret line="106" column="1" lean-forward="false" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="e#2898#2899#0" expanded="true" />
+            <element signature="e#2926#2927#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1207,7 +1432,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4092">
           <caret line="125" column="5" lean-forward="false" selection-start-line="125" selection-start-column="5" selection-end-line="125" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#3528#3529#0" expanded="true" />
+            <element signature="e#3586#3587#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1234,14 +1462,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/FileModel/SnapShot.java" />
-    <entry file="file://$PROJECT_DIR$/src/View/GitLet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repository/Serializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1254,16 +1474,6 @@
         <state relative-caret-position="924">
           <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/State/GitLetStateMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="9" column="56" lean-forward="false" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1306,6 +1516,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
           <caret line="13" column="5" lean-forward="false" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1313,14 +1524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$JAVA$/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="37" column="33" lean-forward="false" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1355,22 +1558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/State/UnInitializedState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="67" column="8" lean-forward="false" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/State/GitVCS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Tools/IDGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1379,26 +1566,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CommitTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="407" column="44" lean-forward="false" selection-start-line="407" selection-start-column="44" selection-end-line="407" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/Repository/DeserializerImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-376">
           <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/GitLetFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="111" column="51" lean-forward="false" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -1414,7 +1585,7 @@
     <entry file="file://$PROJECT_DIR$/src/Repository/DeserializerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
-          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1427,28 +1598,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/State/InitializedState.java">
+    <entry file="file://$PROJECT_DIR$/src/View/GitLet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="268" column="0" lean-forward="false" selection-start-line="268" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
+        <state relative-caret-position="816">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/State/GitVCS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="788">
+          <caret line="173" column="40" lean-forward="false" selection-start-line="173" selection-start-column="28" selection-end-line="173" selection-end-column="40" />
+          <folding>
+            <element signature="e#3528#3529#0" expanded="true" />
+            <element signature="e#3586#3587#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/State/GitLetStateMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/State/UnInitializedState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding>
+            <element signature="e#2898#2899#0" expanded="true" />
+            <element signature="e#2926#2927#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/CommitTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6983">
+          <caret line="407" column="44" lean-forward="false" selection-start-line="407" selection-start-column="44" selection-end-line="407" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$JAVA$/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="778">
+          <caret line="37" column="33" lean-forward="false" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Model/State/InitializedStateTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="297">
+          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/GitLetFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2937">
+          <caret line="94" column="31" lean-forward="false" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/State/InitializedState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="132" column="0" lean-forward="true" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        <state relative-caret-position="396">
+          <caret line="42" column="63" lean-forward="false" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
