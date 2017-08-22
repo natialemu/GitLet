@@ -21,6 +21,7 @@ public class DeserializerImpl implements Deserializer {
             FileInputStream fileIn = new FileInputStream(GitVCS.RESOURCES_DIRECTORY+".gitlet/"+ newFilename + ".ser");
             ObjectInputStream input = new ObjectInputStream(fileIn);
             originalFile = (File) input.readObject();
+            originalFile.createNewFile();
             input.close();
             fileIn.close();
 

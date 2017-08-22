@@ -3,15 +3,18 @@ package Model.State;
 import Model.CommitTree;
 import Model.Snapshot;
 import Model.Tools.RandomFileGenerator;
+import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
  * Created by Nathnael on 8/18/2017.
@@ -21,16 +24,16 @@ class InitializedStateTest {
 
     private GitVCS gitVCS;
 
-    String firstTestFileName;
-    String secondTestFileName;
-    String thirdTestFileName;
-    String fourthTestFileName;
-    String fifthTestFileName;
-    String sixthTestFileName;
-    String seventhTestFileName;
+    private static String firstTestFileName;
+    private static String secondTestFileName;
+    private static String thirdTestFileName;
+    private static String fourthTestFileName;
+    private static String fifthTestFileName;
+    private static String sixthTestFileName;
+    private static String seventhTestFileName;
 
     @BeforeAll
-    public void beforeClass(){
+    public static void beforeClass(){
 
          firstTestFileName = RandomFileGenerator.createRandomText();
          secondTestFileName = RandomFileGenerator.createRandomText();
@@ -70,8 +73,8 @@ class InitializedStateTest {
 
         gitVCS.commit("commited File 1");
 
-        gitVCS.add(filename);
-        initializedState = (InitializedState)gitVCS.getINITIALIZED();
+        //gitVCS.add(filename);
+        //initializedState = (InitializedState)gitVCS.getINITIALIZED();
         assert(!initializedState.isInWorkingDirector(filename));
         String secondFile = RandomFileGenerator.createRandomText();
 
@@ -148,19 +151,35 @@ class InitializedStateTest {
         gitVCS.add(firstTestFileName);
         gitVCS.add(fourthTestFileName);
         gitVCS.commit("commited four files");
-        File beforeModification = new File(GitVCS.RESOURCES_DIRECTORY+fourthTestFileName);
+        File fouthFile = new File(GitVCS.RESOURCES_DIRECTORY+fourthTestFileName);
 
+        //File tempFile = new File(GitVCS.RESOURCES_DIRECTORY+"testFile");
+        String randomText = RandomFileGenerator.createRandomText();
+        File randomFile = new File(GitVCS.RESOURCES_DIRECTORY+randomText);
+        InitializedState initializedState = (InitializedState)gitVCS.getINITIALIZED();
+
+        RandomFileGenerator.copyFile(fouthFile,randomFile);
+        long beforeMod = fouthFile.lastModified();
         RandomFileGenerator.randomlyModifyFile(fourthTestFileName);
 
-        File afterModification = new File(GitVCS.RESOURCES_DIRECTORY+fourthTestFileName);
+        long afterMod = fouthFile.lastModified();
+        //File afterModification = new File(GitVCS.RESOURCES_DIRECTORY+fourthTestFileName);
 
-        assert(!beforeModification.equals(afterModification));
+
+
+        assertNotEquals(beforeMod,afterMod);
 
         gitVCS.checkout(fourthTestFileName);
 
-        File afterCheckout = new File(GitVCS.RESOURCES_DIRECTORY+fourthTestFileName);
+        //File afterCheckout = new File(GitVCS.RESOURCES_DIRECTORY+fourthTestFileName);
 
-        assertEquals(beforeModification,afterCheckout);
+        try {
+            assert (FileUtils.contentEquals(randomFile,fouthFile));
+
+        }catch (IOException ie){
+
+        }
+        //assertEquals(tempFile,afterCheckout);
 
 
 
@@ -180,8 +199,14 @@ class InitializedStateTest {
         File destinationFile = new File(GitVCS.RESOURCES_DIRECTORY+destination);
         assert (!sourceFile.equals(destinationFile));
         InitializedState initializedState = (InitializedState) gitVCS.getINITIALIZED();
-        initializedState.copyFile(sourceFile,destinationFile);
-        assertEquals(sourceFile,destinationFile);
+        RandomFileGenerator.copyFile(sourceFile,destinationFile);
+        try {
+            assert (FileUtils.contentEquals(sourceFile,destinationFile));
+
+        }catch (IOException ie){
+
+        }
+        //assertEquals(sourceFile,destinationFile);
 
     }
 

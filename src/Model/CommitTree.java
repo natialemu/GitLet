@@ -30,13 +30,17 @@ public class CommitTree implements Serializable {
     private int currentMaxID;
 
     public CommitTree(){
+        Snapshot initialCommit = new Snapshot(0,"initial commit");
         branchPointers = new HashMap<>();
         mappedCommits  = new HashMap<>();
         mapMessageToCommit = new HashMap();
         //deserializer = new DeserializerImpl();
 
         // commitTree = new ArrayList<>();
-        currentBranchName = "Master";//by default should be master
+        currentBranchName = "master";//by default should be master
+        branchPointers.put(currentBranchName,initialCommit);
+
+        //mapMessageToCommit.put("initial commit",)
         currentMaxID = 0;
 
     }
@@ -137,7 +141,7 @@ public class CommitTree implements Serializable {
     }
 
     public boolean fileIsInLastCommit(String filename){
-        //TODO:
+        //TODO: add initial commit for this reason
         Snapshot lastcommit = branchPointers.get(currentBranchName);
 
         for(FileInfo fileInfo: lastcommit.getFiles()){

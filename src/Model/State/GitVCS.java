@@ -29,6 +29,8 @@ public class GitVCS {
 
     private Serializer serializer;
 
+    private CommitTree commitTree = new CommitTree();
+
     public static final String RESOURCES_DIRECTORY = "./workingDirectory/";
 
     public void setCommitTree(CommitTree commitTree){
@@ -44,9 +46,9 @@ public class GitVCS {
         return UNINITIALIZED;
     }
 
-    GitLetStateMachine INITIALIZED = new InitializedState(this);
+    GitLetStateMachine INITIALIZED = new InitializedState(this,commitTree);
 
-    GitLetStateMachine UNINITIALIZED = new UnInitializedState(this);
+    GitLetStateMachine UNINITIALIZED = new UnInitializedState(this,commitTree);
 
     public GitVCS(){
 

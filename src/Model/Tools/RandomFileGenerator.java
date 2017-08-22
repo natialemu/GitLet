@@ -92,4 +92,24 @@ public class RandomFileGenerator {
 
 
     }
+
+    public static void copyFile(File source, File desination){
+        try{
+            FileInputStream inputStream= new FileInputStream(source);
+            FileOutputStream outputStream = new FileOutputStream(desination);
+
+            byte[] buffer = new byte[1024];
+
+            int length;
+
+            while((length = inputStream.read(buffer)) > 0){
+                outputStream.write(buffer,0,length);
+            }
+            inputStream.close();
+            outputStream.close();
+
+        }catch (IOException ioe){
+            ioe.printStackTrace();
+        }
+    }
 }

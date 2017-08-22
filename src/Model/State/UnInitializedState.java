@@ -1,6 +1,7 @@
 package Model.State;
 
 import Model.CommitTree;
+import Model.Snapshot;
 
 import java.io.File;
 
@@ -11,8 +12,9 @@ public class UnInitializedState implements GitLetStateMachine {
     //String directoryPath;
     private CommitTree tree;
     GitVCS gitlet;
-    public UnInitializedState(GitVCS gitlet){
+    public UnInitializedState(GitVCS gitlet, CommitTree tree){
         this.gitlet = gitlet;
+        this.tree = tree;
         //directoryPath = "";
     }
     @Override
@@ -23,16 +25,19 @@ public class UnInitializedState implements GitLetStateMachine {
         try{
             if(gitFile.exists() && settingsFile.exists()){
                 //
-                CommitTree commitTree = gitlet.getDeserializer().deserializeCommitTree();
+                tree = gitlet.getDeserializer().deserializeCommitTree();
+
 
                 //tree.buildTree(settingsFile);
-                gitlet.setCommitTree(commitTree);
+
                 gitlet.toInitializedState();
 
-                gitlet.setCommitTree(commitTree);
+
             }else{
                 gitFile.mkdir();
                 gitlet.toInitializedState();
+               // Snapshot initialSnapshot = new Snapshot(0,"initial commit");
+                //tree.addSnapshotToTree(initialSnapshot);
                 //gitlet.add(".gitlet");
                 //gitlet.commit("Initial Commit");
             }
@@ -59,6 +64,7 @@ public class UnInitializedState implements GitLetStateMachine {
 
     @Override
     public Void rm(String filename) {
+
         return null;
     }
 

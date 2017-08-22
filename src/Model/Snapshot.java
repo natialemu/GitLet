@@ -89,11 +89,21 @@ public class Snapshot implements Serializable{
 
     public boolean isFileMarked(String filename){
         //check if file exists is marked for removal
+        for(FileInfo fileInfo: getFiles()){
+            if(fileInfo.getFilename().equals(filename) && fileInfo.tagged()){
+                return true;
+            }
+        }
         return false;
 
     }
 
     public void unMarkFile(String filename){
+        for(FileInfo fileInfo: getFiles()){
+            if(fileInfo.getFilename().equals(filename) && fileInfo.tagged()){
+                fileInfo.removeTag();
+            }
+        }
         //check if file is tagged for removal and if so, untag it
     }
 
@@ -140,6 +150,10 @@ public class Snapshot implements Serializable{
         result = 31 * result + id;
         result = 31 * result + (commitMessage != null ? commitMessage.hashCode() : 0);
         return result;
+    }
+
+    public void tagForRemoval(FileInfo fileInfo){
+        fileInfo.tagForRemoval();
     }
 
 //the methods go here!!!

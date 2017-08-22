@@ -2,6 +2,7 @@ package Repository;
 
 import Model.CommitTree;
 import Model.State.GitVCS;
+import Model.Tools.RandomFileGenerator;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -19,13 +20,19 @@ public class SerializerImpl implements Serializer {
         File toBeSerialized = new File(GitVCS.RESOURCES_DIRECTORY + filename);
         String newFilename = filename.substring(0, filename.indexOf('.'));
         String serializedName = newFilename + commitID+".ser";
+        try {
+            File newFileInGitLet = new File(GitVCS.RESOURCES_DIRECTORY + ".gitlet/" + newFilename + commitID + ".txt");
+            newFileInGitLet.createNewFile();
+            RandomFileGenerator.copyFile(toBeSerialized,newFileInGitLet);
+
+
         if (!toBeSerialized.exists()) {
             return null;
         }
-        try {
+
             FileOutputStream fileout = new FileOutputStream(GitVCS.RESOURCES_DIRECTORY +".gitlet/" + serializedName);
             ObjectOutputStream output = new ObjectOutputStream(fileout);
-            output.writeObject(toBeSerialized);
+            output.writeObject(newFileInGitLet);
             output.flush();
             output.close();
             fileout.close();
