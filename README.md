@@ -9,13 +9,22 @@ Gitlet is a version control system similar to git. Its saves snapshots or commit
 ## Gitlet commands
 
 
-- [add:] gitlet add [file name]
-- [commit:] gitlet commit [commit message]
-- remove: 
-- log: 
--remove
--status
--global-log
+- **gitlet add [file name]: **
+- **gitlet commit [commit message]: **
+- **gitlet rm [file name]: **
+- **gitlet log: **
+- **gitlet global-log: **
+- **gitlet find [commit message]: **
+- **gitlet status: **
+- **gitlet checkout [file name]: **
+- **gitlet checkout [commit id] \[file name]: **
+- **gitlet checkout [branch name]: **
+- **gitlet branch [branch name]: **
+- **gitlet rm-branch [branch name]: **
+- **gitlet reset [commit id]: **
+- **gitlet merge [branch name]: **
+- **gitlet rebase [branch name]: **
+- **gitlet i-rebase [branch name]: **
 
 
 ## Tests 
