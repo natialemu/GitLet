@@ -9,7 +9,7 @@ Gitlet is a version control system similar to git. Its saves snapshots or commit
 ## Gitlet commands
 
 
-- **gitlet add [file name]: **
+- __gitlet add [file name]: __
 - **gitlet commit [commit message]: **
 - **gitlet rm [file name]: **
 - **gitlet log: **
