@@ -19,7 +19,7 @@ Gitlet is a version control system similar to git. Its saves snapshots or commit
 - **gitlet checkout [file name]:** Restores the file in the working directory to its state at the commit at the head of the current branch
 - **gitlet checkout [commit id] \[file name]:** Restores the given file in the working directory to its state at the given commit.
 - **gitlet checkout [branch name]:** Restores all files to their versions in the commit at the head of the given branch
-- **gitlet branch [branch name]: ** Creates a new branch with the given name
+- **gitlet branch [branch name]:** Creates a new branch with the given name
 - **gitlet rm-branch [branch name]:** Deletes the branch with the given name
 - **gitlet reset [commit id]:** Restores all files to their versions in the commit with the given id
 - **gitlet merge [branch name]:** Merges files from the head of the given branch into the head of the current branch
@@ -28,6 +28,7 @@ Gitlet is a version control system similar to git. Its saves snapshots or commit
 
 
 ## Tests 
+
 
 
 ## Design
