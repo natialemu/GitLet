@@ -30,6 +30,8 @@ Gitlet is a version control system similar to git. Its saves snapshots or commit
 ## Tests 
 
 Testing was an essential part of the developement process.
+
+
 ![Alt text](/resources/state_tests.png?raw=true "Tests for Gitlet Commands")
 
 ![Alt text](/resources/commit_tree_tests.png?raw=true "Tests for Commit Tree")
