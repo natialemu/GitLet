@@ -133,6 +133,7 @@ class CommitTreeTest {
         commitTree.addSnapshotToTree(new Snapshot(15,"sixth on master commit"));
 
         String commitMessage4 = "fourth message";
+        assert(commitTree.getCurrentBranch().equals("master"));
         Snapshot secondSnapshot4 = new Snapshot(12,commitMessage4);
         commitTree.addSnapshotToTree(secondSnapshot4);
         
@@ -140,7 +141,7 @@ class CommitTreeTest {
         commitTree.setCurrentBranchName("develop");
         commitTree.addSnapshotToTree(new Snapshot(16,"sixth on develop commit"));
 
-        Snapshot expectedSplitPoint = commitTree.getSplitPoint("Master");
+        Snapshot expectedSplitPoint = commitTree.getSplitPoint("master");
 
         assertEquals(expectedSplitPoint,actualSplitPoint);
 
