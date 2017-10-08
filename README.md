@@ -44,4 +44,5 @@ Testing was an essential part of the developement process.
 
 
 ## Design
+The design is based on the three-layer architectural system: View, Domain Layer and Data Access Layer. The data access layer is responsible for persisting the state of files as well as the state of the data structures by making use of Java's Serializable interface.
 
